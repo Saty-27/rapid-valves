@@ -71,11 +71,11 @@ export const MDMessageSection: React.FC = () => {
               </div>
 
               {/* Portrait Image */}
-              <div className="w-full h-[520px] sm:h-[620px] lg:h-[680px] xl:h-[710px] overflow-hidden bg-[#F2F2F2] flex items-center justify-center">
+              <div className="w-full h-[480px] sm:h-[560px] lg:h-[620px] xl:h-[650px] overflow-hidden bg-[#ECEEF2] flex items-center justify-center">
                 <img
                   src="/images/gaurav-dalal-real.jpg"
                   alt="Gaurav Dalal - Promoter & Managing Director"
-                  className="w-full h-full object-cover object-top group-hover:scale-[1.015] transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-[center_15%] group-hover:scale-[1.015] transition-transform duration-700 ease-out"
                 />
               </div>
 

@@ -52,14 +52,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
     <header
       className={`fixed top-0 left-0 right-0 z-[1000] w-full transition-all duration-300 select-none ${
         isScrolled
-          ? 'bg-white/[0.98] backdrop-blur-[16px] border-b border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-[76px] lg:h-[80px]'
-          : 'bg-transparent border-none shadow-none h-[76px] lg:h-[80px]'
+          ? 'bg-white/[0.98] backdrop-blur-[16px] border-b border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-[80px] lg:h-[86px]'
+          : 'bg-transparent border-none shadow-none h-[80px] lg:h-[86px]'
       }`}
     >
       {/* Single, continuous premium white gradient: protects logo and navigation with smooth seamless falloff */}
       {!isScrolled && (
         <div 
-          className="absolute top-0 left-0 right-0 h-[96px] sm:h-[100px] lg:h-[104px] pointer-events-none z-0"
+          className="absolute top-0 left-0 right-0 h-[105px] sm:h-[110px] lg:h-[116px] pointer-events-none z-0"
           style={{
             background: 'linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.96) 40%, rgba(255,255,255,0.90) 58%, rgba(255,255,255,0.72) 72%, rgba(255,255,255,0.42) 84%, rgba(255,255,255,0.15) 94%, rgba(255,255,255,0) 100%)'
           }}
@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
         />
       )}
 
-      <div className="w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-10 flex items-center justify-between relative z-10">
+      <div className="w-full h-full max-w-[1640px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-10 flex items-center justify-between relative z-10">
         
         {/* ========================================================
             LEFT ZONE: BRAND LOCKUP
@@ -89,36 +89,36 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
         </div>
 
         {/* ========================================================
-            CENTER NAVIGATION: 9 Links
+            CENTER NAVIGATION: 7 Primary Links (Enhanced Font Size & Height)
             Home | About ⌵ | Products ⌵ | Industries ⌵ | Marine & Defence ⌵ |
-            Engineering | Manufacturing | Investors ⌵ | Resources ⌵
+            Investors ⌵ | View More ⌵
            ======================================================== */}
-        <div className="hidden lg:flex items-center space-x-2.5 xl:space-x-4 2xl:space-x-5 min-w-0">
+        <div className="hidden lg:flex items-center space-x-3.5 xl:space-x-5 2xl:space-x-6 min-w-0">
           
-          <nav className="flex items-center space-x-2.5 xl:space-x-4 2xl:space-x-5 whitespace-nowrap text-[12.5px] xl:text-[13px] 2xl:text-[13.5px]">
+          <nav className="flex items-center space-x-3.5 xl:space-x-5 2xl:space-x-6 whitespace-nowrap text-[14.5px] xl:text-[15.5px] 2xl:text-[16px]">
             
             {/* 1. Home */}
             <a
               href="#"
-              className="font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-4 cursor-pointer whitespace-nowrap"
+              className="font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-5 cursor-pointer whitespace-nowrap"
             >
               Home
             </a>
 
             {/* 2. About ⌵ */}
             <div
-              className="relative py-4 group"
+              className="relative py-5 group"
               onMouseEnter={() => handleMouseEnter('about')}
               onMouseLeave={handleMouseLeave}
             >
               <a
                 href="#about"
-                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>About</span>
                 <ChevronDown
-                  size={12}
-                  strokeWidth={2.2}
+                  size={14}
+                  strokeWidth={2.4}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'about' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -162,20 +162,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 2. Products ⌵ */}
+            {/* 3. Products ⌵ */}
             <div
-              className="relative py-4 group"
+              className="relative py-5 group"
               onMouseEnter={() => handleMouseEnter('products')}
               onMouseLeave={handleMouseLeave}
             >
               <a
                 href="#products"
-                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Products</span>
                 <ChevronDown
-                  size={12}
-                  strokeWidth={2.2}
+                  size={14}
+                  strokeWidth={2.4}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'products' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -249,20 +249,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 3. Industries ⌵ */}
+            {/* 4. Industries ⌵ */}
             <div
-              className="relative py-4 group"
+              className="relative py-5 group"
               onMouseEnter={() => handleMouseEnter('industries')}
               onMouseLeave={handleMouseLeave}
             >
               <a
                 href="#industries"
-                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Industries</span>
                 <ChevronDown
-                  size={12}
-                  strokeWidth={2.2}
+                  size={14}
+                  strokeWidth={2.4}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'industries' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -314,20 +314,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 4. Marine & Defence ⌵ */}
+            {/* 5. Marine & Defence ⌵ */}
             <div
-              className="relative py-4 group"
+              className="relative py-5 group"
               onMouseEnter={() => handleMouseEnter('marine')}
               onMouseLeave={handleMouseLeave}
             >
               <a
                 href="#industries"
-                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Marine & Defence</span>
                 <ChevronDown
-                  size={12}
-                  strokeWidth={2.2}
+                  size={14}
+                  strokeWidth={2.4}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'marine' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -373,18 +373,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
 
             {/* 6. Investors ⌵ */}
             <div
-              className="relative py-4 group"
+              className="relative py-5 group"
               onMouseEnter={() => handleMouseEnter('investors')}
               onMouseLeave={handleMouseLeave}
             >
               <a
                 href="#investors"
-                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Investors</span>
                 <ChevronDown
-                  size={12}
-                  strokeWidth={2.2}
+                  size={14}
+                  strokeWidth={2.4}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'investors' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -430,17 +430,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
 
             {/* 7. View More ⌵ (Engineering, Manufacturing, Resources, Blogs, Video Gallery, Project Gallery) */}
             <div
-              className="relative py-4 group"
+              className="relative py-5 group"
               onMouseEnter={() => handleMouseEnter('more')}
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1 focus:outline-none"
+                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1 focus:outline-none"
               >
                 <span>View More</span>
                 <ChevronDown
-                  size={12}
-                  strokeWidth={2.2}
+                  size={14}
+                  strokeWidth={2.4}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'more' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
