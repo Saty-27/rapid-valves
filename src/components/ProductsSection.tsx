@@ -123,7 +123,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
       style={{
         transitionDelay: isVisible ? `${(idx % 3) * 110 + (idx >= 3 ? 180 : 0)}ms` : '0ms',
       }}
-      className={`group relative h-[380px] sm:h-[400px] lg:h-[420px] rounded-[16px] lg:rounded-[18px] overflow-hidden border border-gray-200/90 shadow-xs hover:shadow-xl transition-all duration-700 ease-apple hover:-translate-y-2 cursor-pointer bg-white transform-gpu ${
+      className={`group relative h-[390px] sm:h-[415px] lg:h-[435px] rounded-[16px] lg:rounded-[18px] overflow-hidden border border-gray-200/90 shadow-xs hover:shadow-xl transition-all duration-700 ease-apple hover:-translate-y-2 cursor-pointer bg-white transform-gpu ${
         isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-[0.98]'
       }`}
     >
@@ -146,7 +146,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
       <div
         className="absolute inset-0 z-10 bg-white pointer-events-none"
         style={{
-          clipPath: 'polygon(0 0, 62% 0, 44% 100%, 0 100%)'
+          clipPath: 'polygon(0 0, 65% 0, 52% 100%, 0 100%)'
         }}
       />
 
@@ -157,9 +157,9 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
         viewBox="0 0 100 100"
       >
         <line
-          x1="62"
+          x1="65"
           y1="0"
-          x2="44"
+          x2="52"
           y2="100"
           stroke="#D71920"
           strokeWidth="0.8"
@@ -173,11 +173,11 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
       {/* ========================================================
           LEFT SIDE: INFORMATION PANEL CONTENT
          ======================================================== */}
-      <div className="relative z-30 w-full max-w-[48%] sm:max-w-[45%] p-5 sm:p-6 flex flex-col justify-between h-full pointer-events-none">
+      <div className="relative z-30 w-full max-w-[55%] sm:max-w-[51%] p-5 sm:p-6 pr-3 sm:pr-4 flex flex-col justify-between h-full pointer-events-none">
         <div>
           {/* Product Number: Pops in first */}
           <div
-            className={`font-poppins font-bold text-[28px] sm:text-[32px] text-[#D71920] leading-none mb-3 transform-gpu transition-all duration-500 ease-apple ${
+            className={`font-poppins font-bold text-[28px] sm:text-[32px] text-[#D71920] leading-none mb-2.5 transform-gpu transition-all duration-500 ease-apple ${
               isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-2'
             }`}
           >
@@ -185,37 +185,56 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
           </div>
 
           {/* Product Title: Poppins 800 ExtraBold */}
-          <h3 className="font-poppins font-extrabold text-[24px] sm:text-[28px] lg:text-[30px] leading-[0.95] tracking-[-0.025em] text-[#111418] group-hover:text-[#D71920] transition-colors mb-2">
+          <h3 className="font-poppins font-extrabold text-[23px] sm:text-[26px] lg:text-[28px] leading-[0.98] tracking-[-0.025em] text-[#111418] group-hover:text-[#D71920] transition-colors mb-1.5">
             {prod.name.map((line, i) => (
               <span key={i} className="block">{line}</span>
             ))}
           </h3>
 
           {/* Subtitle */}
-          <p className="font-poppins font-medium text-[10px] sm:text-[11px] text-[#3F4448] uppercase tracking-wider mb-2 leading-tight">
+          <p className="font-poppins font-medium text-[9.5px] sm:text-[10.5px] text-[#4B5563] uppercase tracking-wider mb-2 leading-tight">
             {prod.type}
           </p>
 
           {/* Red Detail Line */}
-          <div className="w-8 h-[2px] bg-[#D71920] mb-4 group-hover:w-12 transition-all duration-300" />
+          <div className="w-8 h-[2px] bg-[#D71920] mb-3 sm:mb-3.5 group-hover:w-12 transition-all duration-300" />
 
-          {/* Technical Specifications */}
-          <div className="space-y-1.5 text-[10px] sm:text-[11px]">
-            <div className="flex items-baseline justify-between pr-2">
-              <span className="font-poppins font-medium text-[#6B7280]">Pressure</span>
-              <span className="font-poppins font-semibold text-[#3F4448] text-right truncate max-w-[110px]">{prod.pressure.split('/')[0]}</span>
+          {/* Technical Specifications: Spacious, un-congested layout with zero word collisions */}
+          <div className="space-y-2 text-[11px] sm:text-[11.5px] font-poppins pt-0.5">
+            <div className="flex items-baseline justify-between gap-3 border-b border-gray-100/90 pb-1.5">
+              <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
+                Pressure
+              </span>
+              <span className="font-semibold text-[#111418] text-right">
+                {prod.pressure.split('/')[0].trim()}
+              </span>
             </div>
-            <div className="flex items-baseline justify-between pr-2">
-              <span className="font-poppins font-medium text-[#6B7280]">Size Range</span>
-              <span className="font-poppins font-semibold text-[#3F4448] text-right truncate max-w-[110px]">{prod.sizeRange.split('(')[0]}</span>
+
+            <div className="flex items-baseline justify-between gap-3 border-b border-gray-100/90 pb-1.5">
+              <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
+                Size Range
+              </span>
+              <span className="font-semibold text-[#111418] text-right">
+                {prod.sizeRange.split('(')[0].trim()}
+              </span>
             </div>
-            <div className="flex items-baseline justify-between pr-2">
-              <span className="font-poppins font-medium text-[#6B7280]">Application</span>
-              <span className="font-poppins font-semibold text-[#3F4448] text-right truncate max-w-[110px]">{prod.application}</span>
+
+            <div className="flex items-baseline justify-between gap-3 border-b border-gray-100/90 pb-1.5">
+              <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
+                Application
+              </span>
+              <span className="font-semibold text-[#111418] text-right leading-tight">
+                {prod.application}
+              </span>
             </div>
-            <div className="flex items-baseline justify-between pr-2">
-              <span className="font-poppins font-medium text-[#6B7280]">Configuration</span>
-              <span className="font-poppins font-semibold text-[#3F4448] text-right truncate max-w-[110px]">{prod.configuration}</span>
+
+            <div className="flex items-baseline justify-between gap-3 pb-0.5">
+              <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
+                Configuration
+              </span>
+              <span className="font-semibold text-[#111418] text-right leading-tight">
+                {prod.configuration}
+              </span>
             </div>
           </div>
         </div>
