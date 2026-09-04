@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
         
         {/* Horizontal Red Band - Pure brand red (#D71920) matching tab */}
         <div
-          className="relative w-full h-24 sm:h-28 lg:h-[118px] bg-[#D71920] flex items-center justify-between px-6 sm:px-12 xl:px-20 shadow-xl overflow-visible"
+          className="relative w-full h-24 sm:h-28 lg:h-[122px] bg-[#D71920] flex items-center justify-between px-6 sm:px-12 xl:px-20 shadow-xl overflow-visible"
         >
           
           {/* Left Side Statement: PRECISION ENGINEERED. PERFORMANCE ASSURED. */}
@@ -37,31 +37,31 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
           </div>
 
           {/* CENTER RAISED LOGO CAPSULE / TAB
-              Compact width (~240px) and exact same #D71920 red so it seamlessly merges */}
+              Generously sized (~320-360px) and exact same #D71920 red so it seamlessly merges and satisfies the section */}
           <div
-            className="absolute -top-10 sm:-top-11 lg:-top-12 left-1/2 -translate-x-1/2 w-52 sm:w-56 lg:w-[240px] h-18 sm:h-20 lg:h-[95px] rounded-t-[28px] sm:rounded-t-[34px] bg-[#D71920] flex items-center justify-center pt-2 sm:pt-2.5 px-4 shadow-none z-20"
+            className="absolute -top-12 sm:-top-14 lg:-top-16 xl:-top-[70px] left-1/2 -translate-x-1/2 w-64 sm:w-72 md:w-80 lg:w-[320px] xl:w-[360px] h-20 sm:h-24 lg:h-[110px] xl:h-[120px] rounded-t-[34px] sm:rounded-t-[42px] lg:rounded-t-[48px] bg-[#D71920] flex items-center justify-center pt-2 sm:pt-3 px-6 shadow-none z-20"
           >
             
             {/* Smooth Concave Transition Fillets on Left and Right */}
             <div 
-              className="absolute -bottom-[1px] -left-5 w-5 h-5 pointer-events-none"
+              className="absolute -bottom-[1px] -left-6 w-6 h-6 pointer-events-none"
               style={{
-                background: 'radial-gradient(circle at top left, transparent 20px, #D71920 20px)'
+                background: 'radial-gradient(circle at top left, transparent 24px, #D71920 24px)'
               }}
             />
             <div 
-              className="absolute -bottom-[1px] -right-5 w-5 h-5 pointer-events-none"
+              className="absolute -bottom-[1px] -right-6 w-6 h-6 pointer-events-none"
               style={{
-                background: 'radial-gradient(circle at top right, transparent 20px, #D71920 20px)'
+                background: 'radial-gradient(circle at top right, transparent 24px, #D71920 24px)'
               }}
             />
 
-            {/* User Provided Vector Logo */}
-            <div className="flex flex-col items-center justify-center cursor-pointer group">
+            {/* Prominently Sized Vector Brand Crown Logo */}
+            <div className="flex flex-col items-center justify-center cursor-pointer group w-full px-2">
               <img
                 src="/images/footer-crown-logo.png"
                 alt="Rappid Valves - Always In Control"
-                className="h-10 sm:h-11 lg:h-[50px] w-auto object-contain group-hover:scale-[1.02] transition-transform duration-200"
+                className="h-14 sm:h-16 md:h-18 lg:h-[74px] xl:h-[82px] w-auto max-w-full object-contain group-hover:scale-[1.03] transition-transform duration-200 filter drop-shadow-xs"
               />
             </div>
           </div>
