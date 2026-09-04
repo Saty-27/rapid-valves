@@ -59,10 +59,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[1000] w-full bg-white/[0.98] backdrop-blur-[14px] border-b border-gray-100 transition-all duration-200 select-none h-[76px] lg:h-[80px] ${
+      className={`fixed top-0 left-0 right-0 z-[1000] w-full transition-all duration-300 select-none h-[76px] lg:h-[80px] ${
         isScrolled
-          ? 'shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
-          : 'shadow-[0_2px_12px_rgba(0,0,0,0.03)]'
+          ? 'bg-white/[0.94] backdrop-blur-[16px] border-b border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
+          : 'bg-gradient-to-b from-white/85 via-white/60 to-white/35 backdrop-blur-[12px] border-b border-white/30 shadow-[0_2px_12px_rgba(0,0,0,0.03)]'
       }`}
     >
       <div className="w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between">
