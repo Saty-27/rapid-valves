@@ -134,6 +134,8 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
         <img
           src={prod.image}
           alt={prod.name.join(' ')}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
         />
         {/* Soft Right vignette */}
@@ -299,6 +301,8 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
             <img
               src="/images/about-card-naval.jpg"
               alt="Marine Vessel Operating in Heavy Seas"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center filter saturate-[1.05]"
             />
             {/* Soft fade into white background toward the left */}
@@ -391,6 +395,8 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
                 <img
                   src={selectedProductModal.image}
                   alt={selectedProductModal.name.join(' ')}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>

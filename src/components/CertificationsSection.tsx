@@ -238,6 +238,8 @@ export const CertificationsSection: React.FC = () => {
                 <img
                   src={selectedCert.image}
                   alt={selectedCert.name}
+                  loading="lazy"
+                  decoding="async"
                   className="max-h-16 max-w-full object-contain"
                 />
               </div>

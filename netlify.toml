@@ -1,8 +1,48 @@
+# Netlify Production Configuration for Rappid Valves
+# Highly optimized for fast CDN edge delivery and instant asset caching
+
 [build]
   publish = "dist"
   command = "npm run build"
 
+# SPA Fallback for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Aggressive Long-Term Caching for Compiled Vite Assets (Immutable)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+# Optimized Caching for Images
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+    X-Content-Type-Options = "nosniff"
+
+# Optimized Streaming Headers for Video
+[[headers]]
+  for = "/video/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+    Accept-Ranges = "bytes"
+
+# Always serve fresh index.html so redeployments appear immediately
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Global Security & Performance Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"

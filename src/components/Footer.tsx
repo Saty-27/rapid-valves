@@ -61,6 +61,8 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               <img
                 src="/images/footer-crown-logo.png"
                 alt="Rappid Valves - Always In Control"
+                loading="lazy"
+                decoding="async"
                 className="h-[54px] sm:h-[62px] lg:h-[74px] w-auto max-w-full object-contain group-hover:scale-[1.03] transition-transform duration-200 filter drop-shadow-xs"
               />
             </div>
@@ -108,6 +110,8 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
                 <img
                   src="/images/rappid-logo-footer-cropped.png"
                   alt="Rappid Valves"
+                  loading="lazy"
+                  decoding="async"
                   className="h-11 sm:h-12 w-auto object-contain"
                 />
               </div>

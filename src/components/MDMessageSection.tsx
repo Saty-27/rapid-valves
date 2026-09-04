@@ -75,6 +75,8 @@ export const MDMessageSection: React.FC = () => {
                 <img
                   src="/images/gaurav-dalal-real.jpg"
                   alt="Gaurav Dalal - Promoter & Managing Director"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-[center_15%] group-hover:scale-[1.015] transition-transform duration-700 ease-out"
                 />
               </div>

@@ -99,6 +99,8 @@ export const VideoMediaSection: React.FC<VideoMediaSectionProps> = ({ onPlayVide
             <img
               src={activeVideo.image}
               alt={activeVideo.title}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700 ease-out opacity-85"
             />
 
@@ -243,6 +245,8 @@ export const VideoMediaSection: React.FC<VideoMediaSectionProps> = ({ onPlayVide
                     <img
                       src={card.image}
                       alt={card.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                     />
 

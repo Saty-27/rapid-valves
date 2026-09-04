@@ -365,6 +365,8 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
             <img
               src="/images/world-map-clean.png"
               alt="Real World Geographic Map"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-contain filter contrast-[1.05] opacity-85 pointer-events-none"
             />
 

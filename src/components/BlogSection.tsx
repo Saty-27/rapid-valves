@@ -201,6 +201,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenContact }) => {
                     src={post.image}
                     alt={post.title}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-500 ease-out"
                   />
                   {/* Subtle Dark Bottom Gradient */}
@@ -279,6 +280,8 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenContact }) => {
               <img
                 src={selectedPost.image}
                 alt={selectedPost.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

@@ -79,11 +79,10 @@ export const Hero: React.FC<HeroProps> = () => {
       {/* True Full-Bleed Edge-to-Edge Video at 3x Speed (plays once, replays on banner hover) */}
       <video
         ref={videoRef}
-        src="/video/RappidValues.mp4"
         autoPlay
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         onLoadedMetadata={(e) => {
           e.currentTarget.playbackRate = 3.0;
         }}

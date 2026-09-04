@@ -171,6 +171,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
                   <img
                     src={card.image}
                     alt={card.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
 

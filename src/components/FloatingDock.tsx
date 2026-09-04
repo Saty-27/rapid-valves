@@ -248,6 +248,8 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
               <img
                 src="/images/ai-valve-launcher.png"
                 alt="Rappid Valve AI Engineer"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform"
               />
               {/* Status Dot */}
@@ -325,6 +327,8 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
                   <img
                     src="/images/ai-valve-avatar.png"
                     alt="Rappid AI Engineer"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>

@@ -181,6 +181,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
             <img
               src={projects[0].image}
               alt={projects[0].title}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
             />
             {/* Gradient Overlay */}
@@ -223,6 +225,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
                 <img
                   src={projects[1].image}
                   alt={projects[1].title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
@@ -254,6 +258,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
                 <img
                   src={projects[2].image}
                   alt={projects[2].title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
@@ -290,6 +296,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
                 <img
                   src={projects[3].image}
                   alt={projects[3].title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
@@ -321,6 +329,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
                 <img
                   src={projects[4].image}
                   alt={projects[4].title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
@@ -352,6 +362,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
                 <img
                   src={projects[5].image}
                   alt={projects[5].title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
@@ -419,6 +431,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
               <img
                 src={projects[lightboxIndex].image}
                 alt={projects[lightboxIndex].title}
+                loading="lazy"
+                decoding="async"
                 className="max-h-[60vh] w-full object-contain"
               />
             </div>

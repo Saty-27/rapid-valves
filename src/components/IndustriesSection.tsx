@@ -171,6 +171,7 @@ export const IndustriesSection: React.FC = () => {
                 alt={ind.name}
                 className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-600 ease-out opacity-90 group-hover:opacity-100"
                 loading="lazy"
+                decoding="async"
               />
 
               {/* Cinematic Dark Gradient for High Text Legibility */}
@@ -212,6 +213,8 @@ export const IndustriesSection: React.FC = () => {
               <img
                 src={activeIndustry.image}
                 alt={activeIndustry.name}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
