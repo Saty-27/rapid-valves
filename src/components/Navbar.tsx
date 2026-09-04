@@ -371,23 +371,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 6. Engineering */}
-            <a
-              href="#process"
-              className="font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-4 cursor-pointer whitespace-nowrap"
-            >
-              Engineering
-            </a>
-
-            {/* 6. Manufacturing */}
-            <a
-              href="#manufacturing"
-              className="font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-4 cursor-pointer whitespace-nowrap"
-            >
-              Manufacturing
-            </a>
-
-            {/* 7. Investors ⌵ */}
+            {/* 6. Investors ⌵ */}
             <div
               className="relative py-4 group"
               onMouseEnter={() => handleMouseEnter('investors')}
@@ -444,56 +428,55 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 8. Resources ⌵ */}
+            {/* 7. View More ⌵ (Engineering, Manufacturing, Resources, Blogs, Video Gallery, Project Gallery) */}
             <div
               className="relative py-4 group"
-              onMouseEnter={() => handleMouseEnter('resources')}
+              onMouseEnter={() => handleMouseEnter('more')}
               onMouseLeave={handleMouseLeave}
             >
-              <a
-                href="#process"
-                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+              <button
+                className="inline-flex items-center font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1 focus:outline-none"
               >
-                <span>Resources</span>
+                <span>View More</span>
                 <ChevronDown
                   size={12}
                   strokeWidth={2.2}
                   className={`ml-1 transition-transform duration-200 ${
-                    activeMenu === 'resources' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
+                    activeMenu === 'more' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
                 />
-              </a>
+              </button>
 
-              {/* Resources Dropdown */}
-              {activeMenu === 'resources' && (
+              {/* View More Dropdown */}
+              {activeMenu === 'more' && (
                 <div
-                  className="absolute right-0 top-full mt-1 w-[400px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
-                  onMouseEnter={() => handleMouseEnter('resources')}
+                  className="absolute right-0 top-full mt-1 w-[460px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
+                  onMouseEnter={() => handleMouseEnter('more')}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
-                    RESOURCES & DOWNLOADS
+                  <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2.5 px-1">
+                    EXPLORE RAPPID CAPABILITIES
                   </div>
                   <div className="grid grid-cols-2 gap-1.5">
                     {[
-                      { name: "Quality Approvals", desc: "ABS, DNV, Lloyd's, CE", href: "#products" },
-                      { name: "Product Catalogs", desc: "Engineering Data Sheets", href: "#products" },
-                      { name: "Testing Standards", desc: "Hydro & Pneumatic Labs", href: "#process" },
-                      { name: "Case Studies", desc: "Naval & Energy Projects", href: "#industries" },
-                      { name: "Material Trims", desc: "Inconel, Monel, Duplex", href: "#products" },
-                      { name: "ISO Certifications", desc: "ISO 9001:2015 & IBR", href: "#process" },
-                    ].map((res) => (
+                      { name: "Engineering", desc: "Design, CFD analysis & R&D", href: "#process" },
+                      { name: "Manufacturing", desc: "45,000 sq.ft. CNC infrastructure", href: "#manufacturing" },
+                      { name: "Resources", desc: "Standards, trims & approvals", href: "#process" },
+                      { name: "Blogs & Insights", desc: "Valve engineering articles", href: "#blog" },
+                      { name: "Video Gallery", desc: "Factory tours & testing films", href: "#media-solutions" },
+                      { name: "Project Gallery", desc: "Critical marine & offshore installations", href: "#gallery" },
+                    ].map((item) => (
                       <a
-                        key={res.name}
-                        href={res.href}
+                        key={item.name}
+                        href={item.href}
                         onClick={() => setActiveMenu(null)}
-                        className="p-2 rounded-sm hover:bg-red-50/70 group/r transition-colors"
+                        className="p-2.5 rounded-sm hover:bg-red-50/70 group/m transition-colors"
                       >
-                        <div className="text-[12px] font-poppins font-semibold text-[#171A1F] group-hover/r:text-[#D71920] transition-colors">
-                          {res.name}
+                        <div className="text-[12.5px] font-poppins font-semibold text-[#111418] group-hover/m:text-[#D71920] transition-colors">
+                          {item.name}
                         </div>
-                        <div className="text-[9.5px] text-[#767B85] line-clamp-1">
-                          {res.desc}
+                        <div className="text-[10px] text-[#767B85] line-clamp-1">
+                          {item.desc}
                         </div>
                       </a>
                     ))}
@@ -507,12 +490,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
         </div>
 
         {/* ========================================================
-            RIGHT ZONE: Search Icon + Red Rectangular CONTACT Button
-            Directly matching media_1788531335265.png:
-            [🔍] [ CONTACT → ]
+            RIGHT ZONE: NSE | RAPPID Image + Search Icon + CONTACT Button
+            Directly matching user prompt & media_1788532313239.png
            ======================================================== */}
-        <div className="hidden lg:flex items-center space-x-3.5 xl:space-x-4 min-w-0 flex-shrink-0">
+        <div className="hidden lg:flex items-center space-x-3 xl:space-x-4 min-w-0 flex-shrink-0">
           
+          {/* Official NSE | RAPPID Listed Badge Image */}
+          <a
+            href="#investors"
+            className="flex items-center opacity-90 hover:opacity-100 transition-all duration-150 py-1 hover:scale-[1.02]"
+            title="NSE Listed Company: RAPPID"
+          >
+            <img
+              src="/images/nse-rappid-logo.png"
+              alt="NSE | RAPPID"
+              className="h-[18px] xl:h-[20px] w-auto object-contain"
+            />
+          </a>
+
+          <div className="h-4 w-[1px] bg-gray-200" />
+
           {/* Search Button */}
           <button
             onClick={onOpenSearch}
@@ -538,19 +535,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             MOBILE HEADER (< lg)
            ======================================================== */}
         <div className="flex lg:hidden items-center justify-between w-full">
-          <a href="#" className="flex items-center space-x-2.5">
+          <a href="#" className="flex items-center space-x-2">
             <img
               src="/images/rapid-logo-header.png"
               alt="RAPID VALVES"
               className="h-8 w-auto object-contain"
             />
-            <div className="h-4 w-[1px] bg-gray-300 hidden sm:block" />
-            <span className="font-poppins font-medium text-[10px] tracking-[0.14em] text-[#4B5563] uppercase whitespace-nowrap hidden sm:inline-block">
-              ALWAYS IN CONTROL
-            </span>
           </a>
 
-          <div className="flex items-center space-x-2.5">
+          <div className="flex items-center space-x-2 sm:space-x-2.5">
+            <a href="#investors" className="opacity-90 hover:opacity-100 flex items-center mr-0.5">
+              <img
+                src="/images/nse-rappid-logo.png"
+                alt="NSE | RAPPID"
+                className="h-[15px] sm:h-[18px] w-auto object-contain"
+              />
+            </a>
             <button
               onClick={onOpenSearch}
               className="p-1.5 text-[#111418] hover:text-[#D71920]"
@@ -676,29 +676,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 5. Engineering */}
-            <div className="border-b border-gray-100 pb-3">
-              <a
-                href="#process"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-poppins font-semibold text-[#111418] block"
-              >
-                Engineering
-              </a>
-            </div>
-
-            {/* 6. Manufacturing */}
-            <div className="border-b border-gray-100 pb-3">
-              <a
-                href="#manufacturing"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-poppins font-semibold text-[#111418] block"
-              >
-                Manufacturing
-              </a>
-            </div>
-
-            {/* 7. Investors */}
+            {/* 5. Investors */}
             <div className="border-b border-gray-100 pb-3">
               <div
                 onClick={() => toggleMobileSubmenu('investors')}
@@ -719,23 +697,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 8. Resources */}
+            {/* 6. View More */}
             <div className="border-b border-gray-100 pb-3">
               <div
-                onClick={() => toggleMobileSubmenu('resources')}
+                onClick={() => toggleMobileSubmenu('more')}
                 className="flex justify-between items-center text-base font-poppins font-semibold text-[#111418] cursor-pointer"
               >
-                <span>Resources</span>
+                <span>View More</span>
                 <span className="text-lg text-gray-400">
-                  {mobileExpanded === 'resources' ? '–' : '+'}
+                  {mobileExpanded === 'more' ? '–' : '+'}
                 </span>
               </div>
-              {mobileExpanded === 'resources' && (
+              {mobileExpanded === 'more' && (
                 <div className="pl-3 mt-2 space-y-2 text-sm text-[#767B85]">
-                  <a href="#products" onClick={() => setMobileMenuOpen(false)} className="block py-1">Quality Approvals</a>
-                  <a href="#products" onClick={() => setMobileMenuOpen(false)} className="block py-1">Product Catalogs</a>
-                  <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block py-1">Testing Standards</a>
-                  <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1">Case Studies</a>
+                  <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Engineering & R&D</a>
+                  <a href="#manufacturing" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Manufacturing Plant</a>
+                  <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Resources & Standards</a>
+                  <a href="#blog" onClick={() => setMobileMenuOpen(false)} className="block py-1">Blogs & Insights</a>
+                  <a href="#media-solutions" onClick={() => setMobileMenuOpen(false)} className="block py-1">Video Gallery</a>
+                  <a href="#gallery" onClick={() => setMobileMenuOpen(false)} className="block py-1">Project Gallery</a>
                 </div>
               )}
             </div>
