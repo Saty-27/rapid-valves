@@ -111,12 +111,16 @@ export const MDMessageSection: React.FC = () => {
             
             {/* Header Area */}
             <div className="mb-6">
-              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] leading-[0.98] tracking-[-0.035em]">
+              <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
+                LEADERSHIP VISION
+              </span>
+
+              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
                 <span className="text-[#111418] block sm:inline">MANAGING DIRECTOR’S </span>
                 <span className="text-[#D71920] block sm:inline">MESSAGE</span>
               </h2>
 
-              <div className="w-10 h-[2.5px] bg-[#D71920] mt-3 mb-4" />
+              <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
             </div>
 
             {/* Leadership Quote Box */}

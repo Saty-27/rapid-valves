@@ -129,15 +129,19 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-10 items-center">
           
           {/* Col 1: Heading & Intro (~4 cols) */}
-          <div className="lg:col-span-4 space-y-5">
-            <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block">
-              INVESTOR HIGHLIGHTS
-            </span>
+          <div className="lg:col-span-4 space-y-4">
+            <div>
+              <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
+                INVESTOR HIGHLIGHTS
+              </span>
 
-            <h2 className="font-poppins font-extrabold text-[36px] sm:text-[44px] lg:text-[48px] leading-[1.0] tracking-[-0.035em]">
-              <span className="text-[#111418] block">STRONG PERFORMANCE.</span>
-              <span className="text-[#D71920] block">SUSTAINABLE GROWTH.</span>
-            </h2>
+              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
+                <span className="text-[#111418] block">STRONG PERFORMANCE.</span>
+                <span className="text-[#D71920] block">SUSTAINABLE GROWTH.</span>
+              </h2>
+
+              <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
+            </div>
 
             <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-md">
               Delivering consistent value backed by scale, experience and a clear vision for high-margin marine and critical defence markets.

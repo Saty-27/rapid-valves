@@ -108,26 +108,43 @@ export const IndustriesSection: React.FC = () => {
       <div className="max-w-[1580px] mx-auto px-6 sm:px-10 xl:px-14">
         
         {/* ========================================================
-            HEADER ROW: ONLY "INDUSTRIES WE SERVE"
+            HEADER ROW: Standardized Design System
            ======================================================== */}
         <div
-          className={`flex items-center justify-between mb-8 sm:mb-10 pb-4 border-b border-gray-200 transform-gpu transition-all duration-700 ease-apple ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          className={`flex flex-col lg:flex-row lg:items-end justify-between mb-12 lg:mb-16 gap-6 transform-gpu transition-all duration-700 ease-apple ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div>
-            <h2 className="font-poppins font-extrabold text-2xl sm:text-3xl lg:text-[32px] text-[#111418] uppercase tracking-tight">
-              INDUSTRIES WE SERVE
+          <div className="max-w-2xl">
+            {/* Eyebrow */}
+            <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
+              SECTORS & APPLICATIONS
+            </span>
+
+            {/* Main Headline */}
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
+              <span className="text-[#111418]">INDUSTRIES </span>
+              <span className="text-[#D71920]">WE SERVE</span>
             </h2>
+
+            {/* Red Accent Line */}
+            <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
+
+            {/* Supporting Copy */}
+            <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-xl">
+              Engineered flow control systems custom-tailored for critical reliability across marine, energy, defence and industrial processing plants worldwide.
+            </p>
           </div>
-          
-          <a
-            href="#contact"
-            className="inline-flex items-center text-[13px] font-poppins font-bold uppercase tracking-wider text-[#D71920] hover:text-[#B8141A] transition-colors group"
-          >
-            <span>View All Industries</span>
-            <ArrowRight size={15} className="ml-1.5 group-hover:translate-x-1.5 transition-transform duration-200" />
-          </a>
+
+          <div className="lg:pb-3">
+            <a
+              href="#contact"
+              className="inline-flex items-center space-x-1.5 font-poppins font-bold text-[12px] uppercase tracking-[0.06em] text-[#D71920] hover:text-[#B8141A] transition-colors group"
+            >
+              <span className="border-b border-transparent group-hover:border-[#D71920] transition-all">VIEW ALL INDUSTRIES</span>
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
+            </a>
+          </div>
         </div>
 
         {/* ========================================================

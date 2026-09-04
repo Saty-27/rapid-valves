@@ -215,16 +215,16 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
             </span>
 
             {/* Main Heading */}
-            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[50px] xl:text-[54px] leading-[1.0] tracking-[-0.035em] text-[#111418]">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em] text-[#111418]">
               <span>FREQUENTLY ASKED </span>
               <span className="text-[#D71920] block sm:inline">QUESTIONS.</span>
             </h2>
 
             {/* Red Underline */}
-            <div className="w-10 h-[2.5px] bg-[#D71920] mt-4 mb-4" />
+            <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
 
             {/* Description */}
-            <p className="font-poppins text-[#6B7280] text-[14.5px] sm:text-[15.5px] leading-relaxed max-w-[520px]">
+            <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-xl">
               Find answers to common questions about our products, applications, quality standards and services.
             </p>
           </div>

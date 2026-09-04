@@ -272,10 +272,11 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
             <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
               OUR PRODUCTS
             </span>
-            <h2 className="font-poppins font-extrabold text-[44px] sm:text-[54px] lg:text-[62px] leading-[0.95] tracking-[-0.04em]">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
               <span className="text-[#111418] block">ENGINEERED</span>
               <span className="text-[#D71920] block">FOR CONTROL</span>
             </h2>
+            <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
           </div>
 
           {/* Middle Column: 06 SYSTEMS Info Block with Vertical Divider */}
@@ -288,7 +289,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
                 SYSTEMS
               </span>
             </div>
-            <p className="font-poppins text-[#5B5F66] text-[13px] sm:text-[14px] leading-relaxed max-w-xs">
+            <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-xs">
               Precision valve systems engineered for reliability, safety, and performance in the harshest marine and industrial environments.
             </p>
           </div>

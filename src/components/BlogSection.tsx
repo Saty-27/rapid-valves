@@ -154,27 +154,26 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenContact }) => {
             HEADER ROW
            ======================================================== */}
         <div
-          className={`text-center max-w-2xl mx-auto mb-14 lg:mb-16 transform-gpu transition-all duration-700 ease-apple ${
+          className={`text-center max-w-2xl mx-auto mb-12 lg:mb-16 transform-gpu transition-all duration-700 ease-apple ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          
           {/* Eyebrow */}
-          <div className="inline-flex flex-col items-center mb-2">
-            <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.20em] text-[#D71920]">
-              OUR BLOG
-            </span>
-            <div className="w-8 h-[2px] bg-[#D71920] mt-1.5" />
-          </div>
+          <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
+            OUR BLOG
+          </span>
 
           {/* Main Headline */}
-          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[46px] leading-[1.05] tracking-[-0.035em] mt-2 mb-3">
+          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
             <span className="text-[#111418]">INSIGHTS. INNOVATION. </span>
             <span className="text-[#D71920]">IMPACT.</span>
           </h2>
 
+          {/* Red Accent Line */}
+          <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5 mx-auto" />
+
           {/* Subtitle */}
-          <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15.5px] leading-relaxed max-w-xl mx-auto">
+          <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-xl mx-auto">
             Stay updated with expert perspectives, industry trends, and engineering insights from the world of flow control.
           </p>
         </div>

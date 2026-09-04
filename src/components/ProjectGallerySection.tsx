@@ -112,7 +112,7 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
             HEADER ROW
            ======================================================== */}
         <div
-          className={`flex flex-col lg:flex-row lg:items-end justify-between mb-8 lg:mb-10 gap-6 transform-gpu transition-all duration-700 ease-apple ${
+          className={`flex flex-col lg:flex-row lg:items-end justify-between mb-12 lg:mb-16 gap-6 transform-gpu transition-all duration-700 ease-apple ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >

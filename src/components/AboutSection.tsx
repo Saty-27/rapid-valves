@@ -81,22 +81,31 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
              ======================================================== */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6">
             
-            {/* Main Headline: ABOUT in dark charcoal, RAPID VALVES in logo red */}
-            <h2
-              className={`font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] text-[#111418] leading-[1.1] tracking-tight transform-gpu transition-all duration-700 ease-apple ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-            >
-              ABOUT <span className="text-[#D71920]">RAPID VALVES</span>
-            </h2>
+            {/* Standardized Section Header */}
+            <div>
+              <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
+                ABOUT US
+              </span>
+
+              <h2
+                className={`font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em] transform-gpu transition-all duration-700 ease-apple ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <span className="text-[#111418]">ABOUT </span>
+                <span className="text-[#D71920]">RAPID VALVES</span>
+              </h2>
+
+              <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
+            </div>
 
             {/* Company Bio Text */}
             <p
-              className={`font-poppins text-[#5B5F66] text-sm sm:text-[15px] leading-relaxed transform-gpu transition-all duration-700 delay-100 ease-apple ${
+              className={`font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-xl transform-gpu transition-all duration-700 delay-100 ease-apple ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
-              <strong className="text-[#171A1F] font-semibold">Rappid Valves</strong> — We are an Engineering company which builds Valve solutions across sectors as per Industry standards. Our technical solutions build precision control systems to ensure longevity in various conditions. Our International standard factory manufactures and exports valves for critical applications in industries such as Hydrocarbon, Marine, Shipbuilding, Distillery, Brewery, Chemical, Power, Mining & General industry. We can meet your biggest challenges in Fluid motion control with our inbuilt Product quality, Design & Development Expertise in engineering, project management, and efficient service.
+              <strong className="text-[#111418] font-semibold">Rappid Valves</strong> — We are an Engineering company which builds Valve solutions across sectors as per Industry standards. Our technical solutions build precision control systems to ensure longevity in various conditions. Our International standard factory manufactures and exports valves for critical applications in industries such as Hydrocarbon, Marine, Shipbuilding, Distillery, Brewery, Chemical, Power, Mining & General industry. We can meet your biggest challenges in Fluid motion control with our inbuilt Product quality, Design & Development Expertise in engineering, project management, and efficient service.
             </p>
 
             {/* 4 Feature Badges in a Row */}

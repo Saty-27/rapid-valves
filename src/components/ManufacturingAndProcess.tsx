@@ -87,7 +87,7 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
               HEADER ROW
              ======================================================== */}
           <div
-            className={`flex flex-col lg:flex-row lg:items-end justify-between mb-12 lg:mb-14 gap-6 transform-gpu transition-all duration-700 ease-apple ${
+            className={`flex flex-col lg:flex-row lg:items-end justify-between mb-12 lg:mb-16 gap-6 transform-gpu transition-all duration-700 ease-apple ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
@@ -96,15 +96,15 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
                 FROM REQUIREMENT TO DELIVERY
               </span>
 
-              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[46px] leading-[1.05] tracking-[-0.035em]">
+              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
                 <span className="text-[#111418] block sm:inline">TRANSPARENT 5-STEP </span>
                 <span className="text-[#111418] block sm:inline">ENGINEERING </span>
                 <span className="text-[#D71920]">WORKFLOW</span>
               </h2>
 
-              <div className="w-10 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
+              <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
 
-              <p className="font-poppins text-[#6B7280] text-[13.5px] sm:text-[14.5px] leading-relaxed max-w-xl">
+              <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-xl">
                 A structured, traceable process that ensures every valve meets the highest standards of quality, safety and performance.
               </p>
             </div>

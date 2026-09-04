@@ -130,17 +130,17 @@ export const CertificationsSection: React.FC = () => {
             </span>
 
             {/* Main Headline */}
-            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[54px] leading-[1.0] tracking-[-0.035em]">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
               <span className="text-[#111418] block sm:inline">COMMITTED TO GLOBAL </span>
               <span className="text-[#111418] block sm:inline">QUALITY </span>
               <span className="text-[#D71920]">STANDARDS</span>
             </h2>
 
             {/* Red Accent Line under Heading */}
-            <div className="w-9 h-[2.5px] bg-[#D71920] mt-4 mb-4" />
+            <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
 
             {/* Supporting Copy */}
-            <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-lg">
+            <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed max-w-xl">
               Rappid Valves adhere to internationally recognized certifications and approvals that ensure safety, reliability, and compliance across global industries.
             </p>
           </div>
