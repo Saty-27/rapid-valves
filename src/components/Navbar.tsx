@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import { Search, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -9,11 +9,8 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const searchInputRef = useRef<HTMLInputElement>(null);
   const menuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Clean, stable scroll listener with 30px threshold
@@ -34,12 +31,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (searchOpen && searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, [searchOpen]);
-
   const handleMouseEnter = (menuName: string) => {
     if (menuTimeoutRef.current) {
       clearTimeout(menuTimeoutRef.current);
@@ -59,13 +50,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[1000] w-full transition-all duration-300 select-none h-[76px] lg:h-[80px] ${
+      className={`fixed top-0 left-0 right-0 z-[1000] w-full transition-all duration-300 select-none ${
         isScrolled
-          ? 'bg-white/[0.94] backdrop-blur-[16px] border-b border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
-          : 'bg-gradient-to-b from-white/85 via-white/60 to-white/35 backdrop-blur-[12px] border-b border-white/30 shadow-[0_2px_12px_rgba(0,0,0,0.03)]'
+          ? 'bg-white/[0.98] backdrop-blur-[16px] border-b border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-[76px] lg:h-[80px]'
+          : 'bg-transparent border-none shadow-none h-[76px] lg:h-[80px]'
       }`}
     >
-      <div className="w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between">
+      {/* Compact white fade matching the navbar height - NO double height overlay */}
+      {!isScrolled && (
+        <div 
+          className="absolute top-0 left-0 right-0 h-[78px] lg:h-[84px] pointer-events-none z-0"
+          style={{
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 55%, rgba(255,255,255,0) 100%)'
+          }}
+          aria-hidden="true"
+        />
+      )}
+
+      <div className="w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between relative z-10">
         
         {/* ========================================================
             LEFT ZONE: BRAND LOCKUP
@@ -78,79 +80,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               alt="RAPID VALVES"
               className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
             />
-            <div className="h-5 sm:h-6 w-[1px] bg-gray-300 hidden sm:block" />
-            <span className="font-poppins font-medium text-[11px] sm:text-[12px] md:text-[12.5px] tracking-[0.16em] sm:tracking-[0.18em] text-[#4B5563] uppercase whitespace-nowrap hidden sm:inline-block">
+            <div className="h-5 sm:h-6 w-[1.5px] bg-gray-400/80 hidden sm:block" />
+            <span className="font-poppins font-medium text-[11px] sm:text-[12px] md:text-[12.5px] tracking-[0.18em] text-[#4B5563] uppercase whitespace-nowrap hidden sm:inline-block">
               ALWAYS IN CONTROL
             </span>
           </a>
         </div>
 
         {/* ========================================================
-            DESKTOP NAVIGATION (lg and up)
-            Links + Dropdowns + Search + Contact CTA
+            CENTER NAVIGATION: 6 Clean Items Matching Reference Mockup
+            Products | Industries | Manufacturing | Company | Quality | Investors
            ======================================================== */}
-        <div className="hidden lg:flex items-center space-x-2 xl:space-x-4 min-w-0">
+        <div className="hidden lg:flex items-center space-x-5 xl:space-x-7 min-w-0">
           
-          <nav className="flex items-center space-x-1.5 xl:space-x-3.5 whitespace-nowrap">
+          <nav className="flex items-center space-x-5 xl:space-x-7 whitespace-nowrap">
             
-            {/* 1. About ▼ */}
-            <div
-              className="relative py-4"
-              onMouseEnter={() => handleMouseEnter('about')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <a
-                href="#about"
-                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
-              >
-                <span>About</span>
-                <ChevronDown
-                  size={11}
-                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
-                    activeMenu === 'about' ? 'rotate-180 text-[#D71920]' : ''
-                  }`}
-                />
-              </a>
-
-              {/* About Dropdown */}
-              {activeMenu === 'about' && (
-                <div
-                  className="absolute left-0 top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
-                  onMouseEnter={() => handleMouseEnter('about')}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
-                    ABOUT RAPPID VALVES
-                  </div>
-                  <div className="space-y-0.5">
-                    {[
-                      { name: "About Rappid", desc: "NSE-listed valve engineering leader", href: "#about" },
-                      { name: "Our Heritage", desc: "Decades of critical fluid control innovations", href: "#about" },
-                      { name: "Vision & Leadership", desc: "Setting benchmarks in high-pressure fluid systems", href: "#about" },
-                      { name: "Manufacturing Infrastructure", desc: "45,000 sq.ft. modern production plant", href: "#manufacturing" },
-                      { name: "Quality & Testing", desc: "100% hydrostatic and pneumatic test protocols", href: "#process" },
-                      { name: "Certifications", desc: "ABS, DNV, CE, TÜV & Lloyd's approvals", href: "#products" },
-                    ].map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        onClick={() => setActiveMenu(null)}
-                        className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/item transition-colors"
-                      >
-                        <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/item:text-[#D71920] transition-colors">
-                          {item.name}
-                        </div>
-                        <div className="text-[10px] text-[#767B85] line-clamp-1">
-                          {item.desc}
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* 2. Products ▼ */}
+            {/* 1. Products */}
             <div
               className="relative py-4"
               onMouseEnter={() => handleMouseEnter('products')}
@@ -158,15 +103,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#products"
-                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
+                className="text-[13.5px] xl:text-[14px] font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
-                <span>Products</span>
-                <ChevronDown
-                  size={11}
-                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
-                    activeMenu === 'products' ? 'rotate-180 text-[#D71920]' : ''
-                  }`}
-                />
+                Products
               </a>
 
               {/* Products Mega Dropdown */}
@@ -236,7 +175,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 3. Industries ▼ */}
+            {/* 2. Industries */}
             <div
               className="relative py-4"
               onMouseEnter={() => handleMouseEnter('industries')}
@@ -244,15 +183,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#industries"
-                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
+                className="text-[13.5px] xl:text-[14px] font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
-                <span>Industries</span>
-                <ChevronDown
-                  size={11}
-                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
-                    activeMenu === 'industries' ? 'rotate-180 text-[#D71920]' : ''
-                  }`}
-                />
+                Industries
               </a>
 
               {/* Industries Dropdown */}
@@ -300,53 +233,56 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 4. Marine & Defence ▼ */}
+            {/* 3. Manufacturing */}
+            <a
+              href="#manufacturing"
+              className="text-[13.5px] xl:text-[14px] font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-4 cursor-pointer whitespace-nowrap"
+            >
+              Manufacturing
+            </a>
+
+            {/* 4. Company */}
             <div
               className="relative py-4"
-              onMouseEnter={() => handleMouseEnter('marine')}
+              onMouseEnter={() => handleMouseEnter('company')}
               onMouseLeave={handleMouseLeave}
             >
               <a
-                href="#industries"
-                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
+                href="#about"
+                className="text-[13.5px] xl:text-[14px] font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
-                <span className="whitespace-nowrap">Marine & Defence</span>
-                <ChevronDown
-                  size={11}
-                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
-                    activeMenu === 'marine' ? 'rotate-180 text-[#D71920]' : ''
-                  }`}
-                />
+                Company
               </a>
 
-              {/* Marine & Defence Dropdown */}
-              {activeMenu === 'marine' && (
+              {/* Company (About) Dropdown */}
+              {activeMenu === 'company' && (
                 <div
-                  className="absolute left-[-80px] xl:left-[-20px] top-full mt-1 w-[360px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
-                  onMouseEnter={() => handleMouseEnter('marine')}
+                  className="absolute left-[-50px] top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
+                  onMouseEnter={() => handleMouseEnter('company')}
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
-                    MARINE & DEFENCE SPECIALTY
+                    ABOUT RAPPID VALVES
                   </div>
-                  <div className="space-y-1">
+                  <div className="space-y-0.5">
                     {[
-                      { name: "Marine Control Valves", desc: "Hull penetration & seawater isolation" },
-                      { name: "Naval Applications", desc: "Frigates, destroyers & stealth corvettes" },
-                      { name: "Submarine Systems", desc: "High-shock qualified & vibration certified" },
-                      { name: "Shipbuilding Yards", desc: "Commercial cargo & container vessel yards" },
-                      { name: "Approvals & Standards", desc: "ABS, DNV, IRS & Lloyd's Type Approvals" },
+                      { name: "About Rappid", desc: "NSE-listed valve engineering leader", href: "#about" },
+                      { name: "Our Heritage", desc: "Decades of critical fluid control innovations", href: "#about" },
+                      { name: "Vision & Leadership", desc: "Setting benchmarks in high-pressure fluid systems", href: "#about" },
+                      { name: "Manufacturing Infrastructure", desc: "45,000 sq.ft. modern production plant", href: "#manufacturing" },
+                      { name: "Quality & Testing", desc: "100% hydrostatic and pneumatic test protocols", href: "#process" },
+                      { name: "Certifications", desc: "ABS, DNV, CE, TÜV & Lloyd's approvals", href: "#products" },
                     ].map((item) => (
                       <a
                         key={item.name}
-                        href="#industries"
+                        href={item.href}
                         onClick={() => setActiveMenu(null)}
-                        className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/m transition-colors"
+                        className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/item transition-colors"
                       >
-                        <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/m:text-[#D71920] transition-colors">
+                        <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/item:text-[#D71920] transition-colors">
                           {item.name}
                         </div>
-                        <div className="text-[10px] text-[#767B85]">
+                        <div className="text-[10px] text-[#767B85] line-clamp-1">
                           {item.desc}
                         </div>
                       </a>
@@ -356,23 +292,58 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 5. Engineering */}
-            <a
-              href="#media-solutions"
-              className="text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 py-4 px-1.5 cursor-pointer whitespace-nowrap"
+            {/* 5. Quality */}
+            <div
+              className="relative py-4"
+              onMouseEnter={() => handleMouseEnter('quality')}
+              onMouseLeave={handleMouseLeave}
             >
-              Engineering
-            </a>
+              <a
+                href="#process"
+                className="text-[13.5px] xl:text-[14px] font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+              >
+                Quality
+              </a>
 
-            {/* 6. Manufacturing */}
-            <a
-              href="#manufacturing"
-              className="text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 py-4 px-1.5 cursor-pointer whitespace-nowrap"
-            >
-              Manufacturing
-            </a>
+              {/* Quality Dropdown */}
+              {activeMenu === 'quality' && (
+                <div
+                  className="absolute left-[-80px] xl:left-[-40px] top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
+                  onMouseEnter={() => handleMouseEnter('quality')}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
+                    QUALITY & CERTIFICATIONS
+                  </div>
+                  <div className="grid grid-cols-2 gap-1">
+                    {[
+                      { name: "Testing Labs", desc: "Hydrostatic & Pneumatic" },
+                      { name: "Type Approvals", desc: "ABS, DNV, Lloyd's, CE" },
+                      { name: "Material Trims", desc: "Inconel, Monel, Duplex" },
+                      { name: "Inspections", desc: "Third-party TUV & IRS" },
+                      { name: "IBR Approved", desc: "Indian Boiler Regulation" },
+                      { name: "ISO 9001:2015", desc: "Certified QMS" },
+                    ].map((res) => (
+                      <a
+                        key={res.name}
+                        href="#process"
+                        onClick={() => setActiveMenu(null)}
+                        className="p-2 rounded-sm hover:bg-red-50/70 group/r transition-colors"
+                      >
+                        <div className="text-[12px] font-poppins font-semibold text-[#171A1F] group-hover/r:text-[#D71920] transition-colors">
+                          {res.name}
+                        </div>
+                        <div className="text-[9.5px] text-[#767B85] line-clamp-1">
+                          {res.desc}
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
 
-            {/* 7. Investors ▼ */}
+            {/* 6. Investors */}
             <div
               className="relative py-4"
               onMouseEnter={() => handleMouseEnter('investors')}
@@ -380,15 +351,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#investors"
-                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
+                className="text-[13.5px] xl:text-[14px] font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
-                <span>Investors</span>
-                <ChevronDown
-                  size={11}
-                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
-                    activeMenu === 'investors' ? 'rotate-180 text-[#D71920]' : ''
-                  }`}
-                />
+                Investors
               </a>
 
               {/* Investors Dropdown */}
@@ -428,111 +393,32 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 8. Resources ▼ */}
-            <div
-              className="relative py-4"
-              onMouseEnter={() => handleMouseEnter('resources')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <a
-                href="#process"
-                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
-              >
-                <span>Resources</span>
-                <ChevronDown
-                  size={11}
-                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
-                    activeMenu === 'resources' ? 'rotate-180 text-[#D71920]' : ''
-                  }`}
-                />
-              </a>
-
-              {/* Resources Dropdown */}
-              {activeMenu === 'resources' && (
-                <div
-                  className="absolute right-0 top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
-                  onMouseEnter={() => handleMouseEnter('resources')}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
-                    TECHNICAL RESOURCES
-                  </div>
-                  <div className="grid grid-cols-2 gap-1">
-                    {[
-                      { name: "Brochures", desc: "Full PDF specifications" },
-                      { name: "Datasheets", desc: "Pressure & temperature" },
-                      { name: "Technical Docs", desc: "Material & trim standards" },
-                      { name: "Blogs & Insights", desc: "Severe service metallurgy" },
-                      { name: "Videos", desc: "Hydrostatic test labs" },
-                      { name: "FAQs", desc: "Technical queries" },
-                    ].map((res) => (
-                      <a
-                        key={res.name}
-                        href="#process"
-                        onClick={() => setActiveMenu(null)}
-                        className="p-2 rounded-sm hover:bg-red-50/70 group/r transition-colors"
-                      >
-                        <div className="text-[12px] font-poppins font-semibold text-[#171A1F] group-hover/r:text-[#D71920] transition-colors">
-                          {res.name}
-                        </div>
-                        <div className="text-[9.5px] text-[#767B85] line-clamp-1">
-                          {res.desc}
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
           </nav>
 
-          <div className="h-4 w-[1px] bg-gray-200 mx-1 flex-shrink-0" />
+        </div>
 
-          {/* Search Icon / Input */}
-          <div className="relative flex items-center flex-shrink-0">
-            {searchOpen ? (
-              <div className="flex items-center bg-white border border-gray-300 rounded-[5px] px-2.5 py-1 w-[160px] shadow-xs animate-fadeIn">
-                <input
-                  ref={searchInputRef}
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      onOpenSearch();
-                      setSearchOpen(false);
-                    }
-                  }}
-                  placeholder="Search..."
-                  className="w-full bg-transparent text-xs text-[#171A1F] placeholder-gray-400 focus:outline-none font-poppins"
-                />
-                <button
-                  onClick={() => setSearchOpen(false)}
-                  className="text-gray-400 hover:text-gray-700 ml-1"
-                >
-                  <X size={13} />
-                </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="text-[#111418] hover:text-[#D71920] hover:bg-gray-100 p-1.5 transition-all duration-150 rounded-full flex items-center justify-center cursor-pointer"
-                title="Search products & resources"
-                aria-label="Search"
-              >
-                <Search size={18} strokeWidth={2} />
-              </button>
-            )}
-          </div>
+        {/* ========================================================
+            RIGHT ZONE: Black Pill "Request a quote" Button (+ Search)
+            Directly matching media_1788527717386.png
+           ======================================================== */}
+        <div className="hidden lg:flex items-center space-x-3 min-w-0">
+          
+          {/* Subtle Search Button */}
+          <button
+            onClick={onOpenSearch}
+            className="text-[#1E232A] hover:text-[#D71920] p-1.5 transition-all duration-150 rounded-full flex items-center justify-center cursor-pointer"
+            title="Search products & resources"
+            aria-label="Search"
+          >
+            <Search size={18} strokeWidth={2} />
+          </button>
 
-          {/* Primary CTA: "CONTACT →" */}
+          {/* Black Pill Button: "Request a quote" */}
           <button
             onClick={onOpenContact}
-            className="inline-flex items-center justify-center space-x-1.5 bg-[#D71920] hover:bg-[#B8141A] text-white font-poppins font-bold text-[12px] xl:text-[12.5px] uppercase tracking-[0.4px] rounded-[5px] shadow-xs hover:shadow transition-all duration-150 cursor-pointer whitespace-nowrap flex-shrink-0 px-4 h-[38px] group"
+            className="inline-flex items-center justify-center bg-[#111418] hover:bg-[#D71920] text-white font-poppins font-medium text-[13px] xl:text-[13.5px] rounded-full px-6 py-2.5 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer whitespace-nowrap flex-shrink-0"
           >
-            <span>CONTACT</span>
-            <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-150" />
+            Request a quote
           </button>
 
         </div>
