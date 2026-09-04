@@ -96,7 +96,7 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
                 FROM REQUIREMENT TO DELIVERY
               </span>
 
-              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
+              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
                 <span className="text-[#111418] block sm:inline">TRANSPARENT 5-STEP </span>
                 <span className="text-[#111418] block sm:inline">ENGINEERING </span>
                 <span className="text-[#D71920]">WORKFLOW</span>

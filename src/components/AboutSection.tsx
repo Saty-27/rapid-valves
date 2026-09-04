@@ -88,7 +88,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
               </span>
 
               <h2
-                className={`font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em] transform-gpu transition-all duration-700 ease-apple ${
+                className={`font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em] transform-gpu transition-all duration-700 ease-apple ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >

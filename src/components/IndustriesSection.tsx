@@ -122,7 +122,7 @@ export const IndustriesSection: React.FC = () => {
             </span>
 
             {/* Main Headline */}
-            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
               <span className="text-[#111418]">INDUSTRIES </span>
               <span className="text-[#D71920]">WE SERVE</span>
             </h2>

@@ -135,7 +135,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
                 INVESTOR HIGHLIGHTS
               </span>
 
-              <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.0] tracking-[-0.035em]">
+              <h2 className="font-poppins font-extrabold text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] leading-[1.14] tracking-[-0.02em]">
                 <span className="text-[#111418] block">STRONG PERFORMANCE.</span>
                 <span className="text-[#D71920] block">SUSTAINABLE GROWTH.</span>
               </h2>
@@ -286,11 +286,12 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
             <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
               GLOBAL PRESENCE
             </span>
-            <h2 className="font-poppins font-extrabold text-[36px] sm:text-[44px] lg:text-[48px] text-[#111418] leading-[1.0] tracking-[-0.035em]">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] text-[#111418] leading-[1.14] tracking-[-0.02em]">
               DELIVERING RELIABILITY<br />
               <span className="text-[#111418]">ACROSS THE WORLD</span>
             </h2>
-            <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed mt-3">
+            <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
+            <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed">
               Building partnerships worldwide with critical installations across marine, defence, industrial and energy sectors.
             </p>
           </div>
