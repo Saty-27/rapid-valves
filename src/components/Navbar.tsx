@@ -56,12 +56,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
           : 'bg-transparent border-none shadow-none h-[76px] lg:h-[80px]'
       }`}
     >
-      {/* Compact white fade matching the navbar height - NO double height overlay */}
+      {/* Single, continuous premium white gradient: protects logo and navigation with smooth seamless falloff */}
       {!isScrolled && (
         <div 
-          className="absolute top-0 left-0 right-0 h-[78px] lg:h-[84px] pointer-events-none z-0"
+          className="absolute top-0 left-0 right-0 h-[96px] sm:h-[100px] lg:h-[104px] pointer-events-none z-0"
           style={{
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 55%, rgba(255,255,255,0) 100%)'
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.96) 40%, rgba(255,255,255,0.90) 58%, rgba(255,255,255,0.72) 72%, rgba(255,255,255,0.42) 84%, rgba(255,255,255,0.15) 94%, rgba(255,255,255,0) 100%)'
           }}
           aria-hidden="true"
         />
