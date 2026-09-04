@@ -71,38 +71,41 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
         
         {/* ========================================================
             LEFT ZONE: BRAND LOCKUP
-            [RAPID VALVES Logo] + [NSE LISTED COMPANY] |
-            Directly matching media_1788531335291.png
+            [RAPID VALVES Logo] | [ALWAYS IN CONTROL]
+            Directly matching media_1788532082903.png
            ======================================================== */}
         <div className="flex items-center flex-shrink-0">
-          <a href="#" className="flex items-center space-x-2.5 sm:space-x-3 group cursor-pointer">
+          <a href="#" className="flex items-center space-x-3 sm:space-x-3.5 group cursor-pointer">
             <img
               src="/images/rapid-logo-header.png"
               alt="RAPID VALVES"
               className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
             />
-            <div className="hidden sm:flex flex-col text-left leading-none pl-1">
-              <span className="font-poppins font-bold text-[12px] md:text-[13px] text-[#111418] tracking-wider uppercase">
-                NSE
-              </span>
-              <span className="font-poppins font-medium text-[8px] md:text-[8.5px] tracking-[0.14em] text-[#6B7280] uppercase mt-0.5">
-                LISTED COMPANY
-              </span>
-            </div>
-            <div className="h-5 sm:h-6 w-[1.5px] bg-gray-300 hidden lg:block ml-1 mr-1" />
+            <div className="h-5 sm:h-6 w-[1.5px] bg-gray-400/80 hidden sm:block" />
+            <span className="font-poppins font-medium text-[11px] sm:text-[12px] md:text-[12.5px] tracking-[0.18em] text-[#4B5563] uppercase whitespace-nowrap hidden sm:inline-block">
+              ALWAYS IN CONTROL
+            </span>
           </a>
         </div>
 
         {/* ========================================================
-            CENTER NAVIGATION: 8 Links Exactly Matching Reference
-            About ⌵ | Products ⌵ | Industries ⌵ | Marine & Defence ⌵ |
+            CENTER NAVIGATION: 9 Links
+            Home | About ⌵ | Products ⌵ | Industries ⌵ | Marine & Defence ⌵ |
             Engineering | Manufacturing | Investors ⌵ | Resources ⌵
            ======================================================== */}
-        <div className="hidden lg:flex items-center space-x-3.5 xl:space-x-5 2xl:space-x-6 min-w-0">
+        <div className="hidden lg:flex items-center space-x-2.5 xl:space-x-4 2xl:space-x-5 min-w-0">
           
-          <nav className="flex items-center space-x-3.5 xl:space-x-5 2xl:space-x-6 whitespace-nowrap text-[13px] xl:text-[13.5px] 2xl:text-[14px]">
+          <nav className="flex items-center space-x-2.5 xl:space-x-4 2xl:space-x-5 whitespace-nowrap text-[12.5px] xl:text-[13px] 2xl:text-[13.5px]">
             
-            {/* 1. About ⌵ */}
+            {/* 1. Home */}
+            <a
+              href="#"
+              className="font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-4 cursor-pointer whitespace-nowrap"
+            >
+              Home
+            </a>
+
+            {/* 2. About ⌵ */}
             <div
               className="relative py-4 group"
               onMouseEnter={() => handleMouseEnter('about')}
@@ -368,10 +371,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
-            {/* 5. Engineering (Colored #D71920 as shown in reference) */}
+            {/* 6. Engineering */}
             <a
               href="#process"
-              className="font-poppins font-semibold text-[#D71920] hover:text-[#B8141A] tracking-normal transition-colors duration-150 py-4 cursor-pointer whitespace-nowrap"
+              className="font-poppins font-medium text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-4 cursor-pointer whitespace-nowrap"
             >
               Engineering
             </a>
@@ -535,17 +538,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             MOBILE HEADER (< lg)
            ======================================================== */}
         <div className="flex lg:hidden items-center justify-between w-full">
-          <a href="#" className="flex items-center space-x-2">
+          <a href="#" className="flex items-center space-x-2.5">
             <img
               src="/images/rapid-logo-header.png"
               alt="RAPID VALVES"
               className="h-8 w-auto object-contain"
             />
             <div className="h-4 w-[1px] bg-gray-300 hidden sm:block" />
-            <div className="hidden sm:flex flex-col text-left leading-none">
-              <span className="font-poppins font-bold text-[10px] text-[#111418] uppercase">NSE</span>
-              <span className="font-poppins font-medium text-[7px] text-[#6B7280] uppercase tracking-wider">LISTED COMPANY</span>
-            </div>
+            <span className="font-poppins font-medium text-[10px] tracking-[0.14em] text-[#4B5563] uppercase whitespace-nowrap hidden sm:inline-block">
+              ALWAYS IN CONTROL
+            </span>
           </a>
 
           <div className="flex items-center space-x-2.5">
@@ -575,6 +577,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
         <div className="lg:hidden fixed inset-x-0 top-[76px] sm:top-[80px] bottom-0 bg-white z-[1100] overflow-y-auto px-6 py-8 border-t border-gray-100 font-poppins flex flex-col justify-between">
           <div className="space-y-4">
             
+            {/* 0. Home */}
+            <div className="border-b border-gray-100 pb-3">
+              <a
+                href="#"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-poppins font-semibold text-[#111418] block"
+              >
+                Home
+              </a>
+            </div>
+
             {/* 1. About */}
             <div className="border-b border-gray-100 pb-3">
               <div
@@ -668,7 +681,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               <a
                 href="#process"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-poppins font-semibold text-[#D71920] block"
+                className="text-base font-poppins font-semibold text-[#111418] block"
               >
                 Engineering
               </a>
