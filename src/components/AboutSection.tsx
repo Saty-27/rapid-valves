@@ -81,12 +81,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
              ======================================================== */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6">
             
-            {/* Standardized Section Header */}
+            {/* Section Header */}
             <div>
-              <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
-                ABOUT US
-              </span>
-
               <h2
                 className={`font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em] transform-gpu transition-all duration-700 ease-apple ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
