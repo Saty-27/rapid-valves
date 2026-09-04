@@ -57,63 +57,41 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
     setMobileExpanded(mobileExpanded === name ? null : name);
   };
 
-  // State-driven typography and icon styling
-  const navLinkText = isScrolled
-    ? 'text-[#111418] hover:text-[#D71920]'
-    : 'text-white hover:text-red-300 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]';
-
-  const navChevron = isScrolled
-    ? 'text-gray-400'
-    : 'text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]';
-
-  const nseTitle = isScrolled
-    ? 'text-[#111418]'
-    : 'text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]';
-
-  const nseSub = isScrolled
-    ? 'text-[#767B85]'
-    : 'text-white/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]';
-
-  const separatorColor = isScrolled
-    ? 'bg-gray-200/90'
-    : 'bg-white/40 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]';
-
-  const searchBtnClass = isScrolled
-    ? 'text-[#111418] hover:text-[#D71920] hover:bg-gray-100'
-    : 'text-white hover:text-red-300 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]';
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[1000] w-full transition-all duration-300 ease-out select-none ${
+      className={`fixed top-0 left-0 right-0 z-[1000] w-full bg-white/[0.98] backdrop-blur-[14px] border-b border-gray-100 transition-all duration-200 select-none h-[76px] lg:h-[80px] ${
         isScrolled
-          ? 'bg-white/[0.98] backdrop-blur-[14px] shadow-[0_4px_24px_rgba(0,0,0,0.05)] h-[80px] lg:h-[82px]'
-          : 'bg-transparent shadow-none h-[86px] lg:h-[88px]'
+          ? 'shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
+          : 'shadow-[0_2px_12px_rgba(0,0,0,0.03)]'
       }`}
     >
-      {/* 3-COLUMN NON-COLLIDING GRID: Left Navigation | Center Logo | Right Navigation */}
-      <div className="w-full h-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-[1fr_auto_1fr] items-center">
+      <div className="w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between">
         
         {/* ========================================================
-            LEFT NAVIGATION ZONE (Column 1 - Takes left 50% minus logo)
-            [NSE LISTED] | [About ▼] [Products ▼] [Industries ▼] [Marine & Defence ▼]
+            LEFT ZONE: BRAND LOCKUP
+            [RAPID VALVES Logo] | [ALWAYS IN CONTROL]
            ======================================================== */}
-        <div className="hidden lg:flex items-center justify-start space-x-3.5 xl:space-x-5 min-w-0 pr-2">
+        <div className="flex items-center flex-shrink-0">
+          <a href="#" className="flex items-center space-x-3 sm:space-x-3.5 group cursor-pointer">
+            <img
+              src="/images/rapid-logo-header.png"
+              alt="RAPID VALVES"
+              className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+            />
+            <div className="h-5 sm:h-6 w-[1px] bg-gray-300 hidden sm:block" />
+            <span className="font-poppins font-medium text-[11px] sm:text-[12px] md:text-[12.5px] tracking-[0.16em] sm:tracking-[0.18em] text-[#4B5563] uppercase whitespace-nowrap hidden sm:inline-block">
+              ALWAYS IN CONTROL
+            </span>
+          </a>
+        </div>
+
+        {/* ========================================================
+            DESKTOP NAVIGATION (lg and up)
+            Links + Dropdowns + Search + Contact CTA
+           ======================================================== */}
+        <div className="hidden lg:flex items-center space-x-2 xl:space-x-4 min-w-0">
           
-          {/* Understated Corporate Credibility Indicator */}
-          <div className="flex flex-col items-start leading-none flex-shrink-0 cursor-default select-none">
-            <span className={`font-poppins font-bold text-[11.5px] xl:text-[12px] ${nseTitle} tracking-wider leading-none transition-colors duration-200`}>
-              NSE
-            </span>
-            <span className={`font-poppins font-semibold text-[7px] xl:text-[7.5px] ${nseSub} tracking-[1px] uppercase mt-0.5 leading-none whitespace-nowrap transition-colors duration-200`}>
-              LISTED COMPANY
-            </span>
-          </div>
-
-          {/* Thin subtle vertical separator */}
-          <div className={`h-3.5 w-[1px] ${separatorColor} flex-shrink-0 transition-colors duration-200`} />
-
-          {/* Navigation Links */}
-          <nav className="flex items-center space-x-3 xl:space-x-4.5 whitespace-nowrap">
+          <nav className="flex items-center space-x-1.5 xl:space-x-3.5 whitespace-nowrap">
             
             {/* 1. About ▼ */}
             <div
@@ -123,12 +101,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#about"
-                className={`flex items-center text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 group cursor-pointer whitespace-nowrap`}
+                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
               >
                 <span>About</span>
                 <ChevronDown
                   size={11}
-                  className={`ml-1 ${navChevron} group-hover:text-[#D71920] transition-transform duration-150 ${
+                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
                     activeMenu === 'about' ? 'rotate-180 text-[#D71920]' : ''
                   }`}
                 />
@@ -180,12 +158,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#products"
-                className={`flex items-center text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 group cursor-pointer whitespace-nowrap`}
+                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
               >
                 <span>Products</span>
                 <ChevronDown
                   size={11}
-                  className={`ml-1 ${navChevron} group-hover:text-[#D71920] transition-transform duration-150 ${
+                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
                     activeMenu === 'products' ? 'rotate-180 text-[#D71920]' : ''
                   }`}
                 />
@@ -194,7 +172,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               {/* Products Mega Dropdown */}
               {activeMenu === 'products' && (
                 <div
-                  className="absolute left-[-20px] top-full mt-1 w-[600px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-6 z-[1100] animate-fadeIn"
+                  className="absolute left-[-80px] xl:left-[-40px] top-full mt-1 w-[590px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-6 z-[1100] animate-fadeIn"
                   onMouseEnter={() => handleMouseEnter('products')}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -266,12 +244,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#industries"
-                className={`flex items-center text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 group cursor-pointer whitespace-nowrap`}
+                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
               >
                 <span>Industries</span>
                 <ChevronDown
                   size={11}
-                  className={`ml-1 ${navChevron} group-hover:text-[#D71920] transition-transform duration-150 ${
+                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
                     activeMenu === 'industries' ? 'rotate-180 text-[#D71920]' : ''
                   }`}
                 />
@@ -280,7 +258,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               {/* Industries Dropdown */}
               {activeMenu === 'industries' && (
                 <div
-                  className="absolute left-[-40px] top-full mt-1 w-[540px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
+                  className="absolute left-[-100px] xl:left-[-30px] top-full mt-1 w-[520px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
                   onMouseEnter={() => handleMouseEnter('industries')}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -330,12 +308,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#industries"
-                className={`flex items-center text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 group cursor-pointer whitespace-nowrap`}
+                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
               >
                 <span className="whitespace-nowrap">Marine & Defence</span>
                 <ChevronDown
                   size={11}
-                  className={`ml-1 ${navChevron} group-hover:text-[#D71920] transition-transform duration-150 ${
+                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
                     activeMenu === 'marine' ? 'rotate-180 text-[#D71920]' : ''
                   }`}
                 />
@@ -344,7 +322,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               {/* Marine & Defence Dropdown */}
               {activeMenu === 'marine' && (
                 <div
-                  className="absolute left-[-40px] top-full mt-1 w-[360px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
+                  className="absolute left-[-80px] xl:left-[-20px] top-full mt-1 w-[360px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
                   onMouseEnter={() => handleMouseEnter('marine')}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -378,168 +356,143 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               )}
             </div>
 
+            {/* 5. Engineering */}
+            <a
+              href="#media-solutions"
+              className="text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 py-4 px-1.5 cursor-pointer whitespace-nowrap"
+            >
+              Engineering
+            </a>
+
+            {/* 6. Manufacturing */}
+            <a
+              href="#manufacturing"
+              className="text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 py-4 px-1.5 cursor-pointer whitespace-nowrap"
+            >
+              Manufacturing
+            </a>
+
+            {/* 7. Investors ▼ */}
+            <div
+              className="relative py-4"
+              onMouseEnter={() => handleMouseEnter('investors')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a
+                href="#investors"
+                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
+              >
+                <span>Investors</span>
+                <ChevronDown
+                  size={11}
+                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
+                    activeMenu === 'investors' ? 'rotate-180 text-[#D71920]' : ''
+                  }`}
+                />
+              </a>
+
+              {/* Investors Dropdown */}
+              {activeMenu === 'investors' && (
+                <div
+                  className="absolute right-0 top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
+                  onMouseEnter={() => handleMouseEnter('investors')}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
+                    INVESTOR RELATIONS
+                  </div>
+                  <div className="space-y-0.5">
+                    {[
+                      { name: "Investor Overview", desc: "Corporate disclosures & company profile", href: "#investors" },
+                      { name: "Financial Results", desc: "Audited financial statements & quarterly results", href: "#investors" },
+                      { name: "Shareholding", desc: "Promoter & institutional holdings details", href: "#investors" },
+                      { name: "Announcements", desc: "Exchange disclosures & media statements", href: "#investors" },
+                      { name: "Corporate Governance", desc: "Board committees, policies & code of conduct", href: "#investors" },
+                    ].map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setActiveMenu(null)}
+                        className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/inv transition-colors"
+                      >
+                        <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/inv:text-[#D71920] transition-colors">
+                          {item.name}
+                        </div>
+                        <div className="text-[10px] text-[#767B85] line-clamp-1">
+                          {item.desc}
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 8. Resources ▼ */}
+            <div
+              className="relative py-4"
+              onMouseEnter={() => handleMouseEnter('resources')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a
+                href="#process"
+                className="flex items-center text-[12.5px] xl:text-[13.5px] font-poppins font-medium text-[#111418] hover:text-[#D71920] tracking-tight transition-colors duration-150 group cursor-pointer whitespace-nowrap py-1 px-1.5"
+              >
+                <span>Resources</span>
+                <ChevronDown
+                  size={11}
+                  className={`ml-1 text-gray-400 group-hover:text-[#D71920] transition-transform duration-150 ${
+                    activeMenu === 'resources' ? 'rotate-180 text-[#D71920]' : ''
+                  }`}
+                />
+              </a>
+
+              {/* Resources Dropdown */}
+              {activeMenu === 'resources' && (
+                <div
+                  className="absolute right-0 top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
+                  onMouseEnter={() => handleMouseEnter('resources')}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
+                    TECHNICAL RESOURCES
+                  </div>
+                  <div className="grid grid-cols-2 gap-1">
+                    {[
+                      { name: "Brochures", desc: "Full PDF specifications" },
+                      { name: "Datasheets", desc: "Pressure & temperature" },
+                      { name: "Technical Docs", desc: "Material & trim standards" },
+                      { name: "Blogs & Insights", desc: "Severe service metallurgy" },
+                      { name: "Videos", desc: "Hydrostatic test labs" },
+                      { name: "FAQs", desc: "Technical queries" },
+                    ].map((res) => (
+                      <a
+                        key={res.name}
+                        href="#process"
+                        onClick={() => setActiveMenu(null)}
+                        className="p-2 rounded-sm hover:bg-red-50/70 group/r transition-colors"
+                      >
+                        <div className="text-[12px] font-poppins font-semibold text-[#171A1F] group-hover/r:text-[#D71920] transition-colors">
+                          {res.name}
+                        </div>
+                        <div className="text-[9.5px] text-[#767B85] line-clamp-1">
+                          {res.desc}
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
           </nav>
-        </div>
 
+          <div className="h-4 w-[1px] bg-gray-200 mx-1 flex-shrink-0" />
 
-        {/* ========================================================
-            CENTER COLUMN (Column 2 - Dedicated, Zero Collision)
-            Mathematically centered in the grid, isolated with padding
-           ======================================================== */}
-        <div className="hidden lg:flex items-center justify-center px-4 xl:px-8 flex-shrink-0">
-          <a href="#" className="inline-flex items-center justify-center cursor-pointer select-none group">
-            <img
-              src="/images/logo.png"
-              alt="Rappid Valves"
-              className={`h-auto object-contain transition-all duration-300 ${
-                isScrolled
-                  ? 'w-[115px] xl:w-[124px]'
-                  : 'w-[120px] xl:w-[128px] filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]'
-              }`}
-            />
-          </a>
-        </div>
-
-
-        {/* ========================================================
-            RIGHT NAVIGATION ZONE (Column 3 - Takes right 50% minus logo)
-            [Engineering] [Manufacturing] [Investors ▼] [Resources ▼] [Search] [CONTACT →]
-           ======================================================== */}
-        <div className="hidden lg:flex items-center justify-end space-x-3 xl:space-x-4.5 min-w-0 pl-2 whitespace-nowrap">
-          
-          {/* 1. Engineering */}
-          <a
-            href="#media-solutions"
-            className={`text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 py-4 cursor-pointer whitespace-nowrap`}
-          >
-            Engineering
-          </a>
-
-          {/* 2. Manufacturing */}
-          <a
-            href="#manufacturing"
-            className={`text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 py-4 cursor-pointer whitespace-nowrap`}
-          >
-            Manufacturing
-          </a>
-
-          {/* 3. Investors ▼ */}
-          <div
-            className="relative py-4"
-            onMouseEnter={() => handleMouseEnter('investors')}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a
-              href="#investors"
-              className={`flex items-center text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 group cursor-pointer whitespace-nowrap`}
-            >
-              <span>Investors</span>
-              <ChevronDown
-                size={11}
-                className={`ml-1 ${navChevron} group-hover:text-[#D71920] transition-transform duration-150 ${
-                  activeMenu === 'investors' ? 'rotate-180 text-[#D71920]' : ''
-                }`}
-              />
-            </a>
-
-            {/* Investors Dropdown */}
-            {activeMenu === 'investors' && (
-              <div
-                className="absolute right-0 top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
-                onMouseEnter={() => handleMouseEnter('investors')}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
-                  INVESTOR RELATIONS
-                </div>
-                <div className="space-y-0.5">
-                  {[
-                    { name: "Investor Overview", desc: "Corporate disclosures & company profile", href: "#investors" },
-                    { name: "Financial Results", desc: "Audited financial statements & quarterly results", href: "#investors" },
-                    { name: "Shareholding", desc: "Promoter & institutional holdings details", href: "#investors" },
-                    { name: "Announcements", desc: "Exchange disclosures & media statements", href: "#investors" },
-                    { name: "Corporate Governance", desc: "Board committees, policies & code of conduct", href: "#investors" },
-                  ].map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setActiveMenu(null)}
-                      className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/inv transition-colors"
-                    >
-                      <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/inv:text-[#D71920] transition-colors">
-                        {item.name}
-                      </div>
-                      <div className="text-[10px] text-[#767B85] line-clamp-1">
-                        {item.desc}
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* 4. Resources ▼ */}
-          <div
-            className="relative py-4"
-            onMouseEnter={() => handleMouseEnter('resources')}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a
-              href="#process"
-              className={`flex items-center text-[13px] xl:text-[14px] font-poppins font-medium ${navLinkText} tracking-tight transition-colors duration-200 group cursor-pointer whitespace-nowrap`}
-            >
-              <span>Resources</span>
-              <ChevronDown
-                size={11}
-                className={`ml-1 ${navChevron} group-hover:text-[#D71920] transition-transform duration-150 ${
-                  activeMenu === 'resources' ? 'rotate-180 text-[#D71920]' : ''
-                }`}
-              />
-            </a>
-
-            {/* Resources Dropdown */}
-            {activeMenu === 'resources' && (
-              <div
-                className="absolute right-0 top-full mt-1 w-[380px] bg-white rounded-[6px] shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-gray-100 p-5 z-[1100] animate-fadeIn"
-                onMouseEnter={() => handleMouseEnter('resources')}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="text-[10px] font-poppins font-bold uppercase tracking-[0.16em] text-[#D71920] mb-2 px-1">
-                  TECHNICAL RESOURCES
-                </div>
-                <div className="grid grid-cols-2 gap-1">
-                  {[
-                    { name: "Brochures", desc: "Full PDF specifications" },
-                    { name: "Datasheets", desc: "Pressure & temperature" },
-                    { name: "Technical Docs", desc: "Material & trim standards" },
-                    { name: "Blogs & Insights", desc: "Severe service metallurgy" },
-                    { name: "Videos", desc: "Hydrostatic test labs" },
-                    { name: "FAQs", desc: "Technical queries" },
-                  ].map((res) => (
-                    <a
-                      key={res.name}
-                      href="#process"
-                      onClick={() => setActiveMenu(null)}
-                      className="p-2 rounded-sm hover:bg-red-50/70 group/r transition-colors"
-                    >
-                      <div className="text-[12px] font-poppins font-semibold text-[#171A1F] group-hover/r:text-[#D71920] transition-colors">
-                        {res.name}
-                      </div>
-                      <div className="text-[9.5px] text-[#767B85] line-clamp-1">
-                        {res.desc}
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* 5. Search Icon */}
-          <div className="relative flex items-center">
+          {/* Search Icon / Input */}
+          <div className="relative flex items-center flex-shrink-0">
             {searchOpen ? (
-              <div className="flex items-center bg-white border border-gray-300 rounded-[5px] px-2.5 py-1 w-[160px] shadow-sm animate-fadeIn">
+              <div className="flex items-center bg-white border border-gray-300 rounded-[5px] px-2.5 py-1 w-[160px] shadow-xs animate-fadeIn">
                 <input
                   ref={searchInputRef}
                   type="text"
@@ -564,7 +517,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             ) : (
               <button
                 onClick={() => setSearchOpen(true)}
-                className={`${searchBtnClass} p-1.5 transition-all duration-200 rounded-full flex items-center justify-center cursor-pointer`}
+                className="text-[#111418] hover:text-[#D71920] hover:bg-gray-100 p-1.5 transition-all duration-150 rounded-full flex items-center justify-center cursor-pointer"
                 title="Search products & resources"
                 aria-label="Search"
               >
@@ -573,47 +526,44 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             )}
           </div>
 
-          {/* 6. Primary CTA: "CONTACT →" */}
+          {/* Primary CTA: "CONTACT →" */}
           <button
             onClick={onOpenContact}
-            className="inline-flex items-center justify-center space-x-1.5 bg-[#D71920] hover:bg-[#B8141A] text-white font-poppins font-bold text-[12px] xl:text-[12.5px] uppercase tracking-[0.4px] rounded-[5px] shadow-xs hover:shadow transition-all duration-200 cursor-pointer whitespace-nowrap flex-shrink-0 px-4 h-[38px] group"
+            className="inline-flex items-center justify-center space-x-1.5 bg-[#D71920] hover:bg-[#B8141A] text-white font-poppins font-bold text-[12px] xl:text-[12.5px] uppercase tracking-[0.4px] rounded-[5px] shadow-xs hover:shadow transition-all duration-150 cursor-pointer whitespace-nowrap flex-shrink-0 px-4 h-[38px] group"
           >
             <span>CONTACT</span>
-            <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-200" />
+            <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-150" />
           </button>
 
         </div>
 
-
         {/* ========================================================
             MOBILE HEADER (< lg)
            ======================================================== */}
-        <div className="flex lg:hidden items-center justify-between w-full col-span-3">
-          <a href="#" className="flex items-center">
+        <div className="flex lg:hidden items-center justify-between w-full">
+          <a href="#" className="flex items-center space-x-2.5">
             <img
-              src="/images/logo.png"
-              alt="Rappid Valves"
-              className="h-[32px] w-auto object-contain"
+              src="/images/rapid-logo-header.png"
+              alt="RAPID VALVES"
+              className="h-8 w-auto object-contain"
             />
+            <div className="h-4 w-[1px] bg-gray-300 hidden sm:block" />
+            <span className="font-poppins font-medium text-[10px] tracking-[0.14em] text-[#4B5563] uppercase whitespace-nowrap hidden sm:inline-block">
+              ALWAYS IN CONTROL
+            </span>
           </a>
 
-          <div className="flex items-center space-x-3">
-            <div className={`flex flex-col items-start leading-none text-[10px] font-poppins font-bold ${
-              isScrolled ? 'text-[#111418]' : 'text-white'
-            }`}>
-              <span>NSE</span>
-              <span className={`text-[7px] ${isScrolled ? 'text-[#767B85]' : 'text-white/80'} font-semibold`}>LISTED</span>
-            </div>
+          <div className="flex items-center space-x-2.5">
             <button
               onClick={onOpenSearch}
-              className={`p-1.5 ${isScrolled ? 'text-[#111418]' : 'text-white'} hover:text-[#D71920]`}
+              className="p-1.5 text-[#111418] hover:text-[#D71920]"
               aria-label="Search"
             >
               <Search size={19} strokeWidth={1.8} />
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`p-1.5 ${isScrolled ? 'text-[#111418]' : 'text-white'} hover:text-[#D71920] focus:outline-none`}
+              className="p-1.5 text-[#111418] hover:text-[#D71920] focus:outline-none"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -622,42 +572,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
         </div>
 
       </div>
-
-      {/* ========================================================
-          FLUID WAVE BOTTOM WITH SOFT FADE ENDING
-          Replaces straight horizontal line with an organic wave curve
-         ======================================================== */}
-      {isScrolled && (
-        <div className="absolute -bottom-[12px] left-0 right-0 w-full overflow-visible pointer-events-none flex justify-center z-[990]">
-          <svg
-            viewBox="0 0 1200 14"
-            className="w-full max-w-[1520px] h-[13px] block"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <linearGradient id="navWaveFadeStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgba(17,20,24,0)" />
-                <stop offset="15%" stopColor="rgba(17,20,24,0.06)" />
-                <stop offset="42%" stopColor="rgba(17,20,24,0.10)" />
-                <stop offset="50%" stopColor="rgba(215,25,32,0.28)" />
-                <stop offset="58%" stopColor="rgba(17,20,24,0.10)" />
-                <stop offset="85%" stopColor="rgba(17,20,24,0.06)" />
-                <stop offset="100%" stopColor="rgba(17,20,24,0)" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M 0 0 L 440 0 C 510 0, 530 12, 600 12 C 670 12, 690 0, 760 0 L 1200 0 L 1200 1 C 760 1, 690 13, 600 13 C 530 13, 510 1, 440 1 L 0 1 Z"
-              fill="rgba(255,255,255,0.98)"
-            />
-            <path
-              d="M 0 1 L 440 1 C 510 1, 530 13, 600 13 C 670 13, 690 1, 760 1 L 1200 1"
-              fill="none"
-              stroke="url(#navWaveFadeStroke)"
-              strokeWidth="1.2"
-            />
-          </svg>
-        </div>
-      )}
 
       {/* ========================================================
           MOBILE NAVIGATION PANEL
