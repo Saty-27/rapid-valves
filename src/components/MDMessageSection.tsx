@@ -136,8 +136,8 @@ export const MDMessageSection: React.FC = () => {
               </span>
 
               {/* Quote Content */}
-              <p className="font-poppins font-semibold text-sm sm:text-[16px] lg:text-[17px] text-[#1F2937] leading-relaxed pt-2 px-1">
-                Our focus has always been to engineer reliable valve solutions that keep industries and nations moving. With every project, our commitment remains the same – Quality, Reliability and Customer Trust.
+              <p className="font-poppins font-semibold text-sm sm:text-[15.5px] lg:text-[16.5px] text-[#1F2937] leading-relaxed pt-2 px-1">
+                RAPPID Valves, founded in 2002 & commenced operations in 2007 by Mr. Gaurav Dalal has become a leading technology company known for its innovative and groundbreaking products manufactured for Marine & other diverse industries. At the helm of this renowned organization is its CEO, a visionary leader who possesses exceptional sales expertise, a profound understanding of technology, and a strong growth vision for the company. CEO's sales acumen, the company's technological advancements, and their ambitious growth vision for the organization.
               </p>
 
               {/* Red Closing Quote */}
