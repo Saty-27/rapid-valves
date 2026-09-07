@@ -131,8 +131,8 @@ export const CertificationsSection: React.FC = () => {
 
             {/* Main Headline */}
             <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
-              <span className="text-[#111418] block sm:inline">COMMITTED TO GLOBAL </span>
-              <span className="text-[#111418] block sm:inline">QUALITY </span>
+              <span className="text-[#58585A] block sm:inline">COMMITTED TO GLOBAL </span>
+              <span className="text-[#58585A] block sm:inline">QUALITY </span>
               <span className="text-[#D71920]">STANDARDS</span>
             </h2>
 
@@ -188,7 +188,7 @@ export const CertificationsSection: React.FC = () => {
                 </div>
 
                 {/* Certificate Name */}
-                <h3 className="font-poppins font-bold text-[13px] sm:text-[14px] uppercase text-[#111418] group-hover:text-[#D71920] transition-colors mb-1.5 leading-snug">
+                <h3 className="font-poppins font-bold text-[13px] sm:text-[14px] uppercase text-[#58585A] group-hover:text-[#D71920] transition-colors mb-1.5 leading-snug">
                   {cert.name}
                 </h3>
 
@@ -227,7 +227,7 @@ export const CertificationsSection: React.FC = () => {
           <div className="bg-white rounded-[16px] max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border-t-4 border-[#D71920] animate-scaleIn">
             <button
               onClick={() => setSelectedCert(null)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-[#111418] text-xl font-bold w-9 h-9 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+              className="absolute top-4 right-4 text-gray-400 hover:text-[#58585A] text-xl font-bold w-9 h-9 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
               aria-label="Close"
             >
               <X size={20} />
@@ -248,7 +248,7 @@ export const CertificationsSection: React.FC = () => {
                 <span className="font-poppins font-bold text-[10px] uppercase tracking-wider text-[#D71920] bg-red-50 px-2 py-0.5 rounded-[4px]">
                   {selectedCert.regStatus}
                 </span>
-                <h3 className="font-poppins font-extrabold text-xl sm:text-2xl text-[#111418] mt-1.5 leading-tight">
+                <h3 className="font-poppins font-extrabold text-xl sm:text-2xl text-[#58585A] mt-1.5 leading-tight">
                   {selectedCert.name}
                 </h3>
                 <p className="font-poppins text-xs text-[#6B7280]">
@@ -259,14 +259,14 @@ export const CertificationsSection: React.FC = () => {
 
             <div className="space-y-4 text-xs font-poppins mb-6">
               <div>
-                <span className="font-bold text-[#111418] block mb-1">Accreditation Authority:</span>
+                <span className="font-bold text-[#58585A] block mb-1">Accreditation Authority:</span>
                 <p className="text-[#5B5F66] leading-relaxed bg-gray-50 p-3 rounded-[6px] border border-gray-100">
                   {selectedCert.authority}
                 </p>
               </div>
 
               <div>
-                <span className="font-bold text-[#111418] block mb-1">Certified Scope & Compliance:</span>
+                <span className="font-bold text-[#58585A] block mb-1">Certified Scope & Compliance:</span>
                 <p className="text-[#5B5F66] leading-relaxed bg-gray-50 p-3 rounded-[6px] border border-gray-100">
                   {selectedCert.scope}
                 </p>
@@ -281,7 +281,7 @@ export const CertificationsSection: React.FC = () => {
 
               <button
                 onClick={() => setSelectedCert(null)}
-                className="px-5 py-2.5 bg-[#111418] hover:bg-[#D71920] text-white text-xs font-poppins font-bold uppercase tracking-wider rounded-[6px] transition-colors cursor-pointer"
+                className="px-5 py-2.5 bg-[#58585A] hover:bg-[#D71920] text-white text-xs font-poppins font-bold uppercase tracking-wider rounded-[6px] transition-colors cursor-pointer"
               >
                 Close Details
               </button>

@@ -74,7 +74,7 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
       <div 
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(#111418 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#58585A 1px, transparent 1px)',
           backgroundSize: '28px 28px'
         }}
       />
@@ -97,8 +97,8 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
               </span>
 
               <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
-                <span className="text-[#111418] block sm:inline">TRANSPARENT 5-STEP </span>
-                <span className="text-[#111418] block sm:inline">ENGINEERING </span>
+                <span className="text-[#58585A] block sm:inline">TRANSPARENT 5-STEP </span>
+                <span className="text-[#58585A] block sm:inline">ENGINEERING </span>
                 <span className="text-[#D71920]">WORKFLOW</span>
               </h2>
 
@@ -239,13 +239,13 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
                         <div className={`w-12 h-12 rounded-[12px] flex items-center justify-center mb-5 transition-all duration-300 ${
                           isActive
                             ? "bg-red-50 text-[#D71920] border border-red-200 scale-105"
-                            : "bg-gray-50 text-[#111418] border border-gray-100 group-hover:text-[#D71920] group-hover:bg-red-50/50"
+                            : "bg-gray-50 text-[#58585A] border border-gray-100 group-hover:text-[#D71920] group-hover:bg-red-50/50"
                         }`}>
                           <IconC size={22} strokeWidth={2} />
                         </div>
 
                         {/* Title */}
-                        <h4 className="font-poppins font-bold text-[13px] sm:text-[14px] uppercase text-[#111418] mb-2 leading-tight tracking-tight">
+                        <h4 className="font-poppins font-bold text-[13px] sm:text-[14px] uppercase text-[#58585A] mb-2 leading-tight tracking-tight">
                           {step.title}
                         </h4>
 
@@ -351,7 +351,7 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
                 <Activity size={20} className="animate-pulse" />
               </div>
               <div>
-                <h5 className="font-poppins font-extrabold text-[12px] uppercase tracking-wider text-[#111418] leading-tight">
+                <h5 className="font-poppins font-extrabold text-[12px] uppercase tracking-wider text-[#58585A] leading-tight">
                   PROCESS
                 </h5>
                 <h5 className="font-poppins font-extrabold text-[12px] uppercase tracking-wider text-[#D71920] leading-tight">
@@ -402,7 +402,7 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
 
                       {/* Step Code */}
                       <span className={`font-poppins font-bold text-[11px] uppercase transition-colors ${
-                        isActive ? "text-[#D71920]" : "text-[#111418]"
+                        isActive ? "text-[#D71920]" : "text-[#58585A]"
                       }`}>
                         STEP {step.num}
                       </span>
@@ -421,7 +421,7 @@ export const ManufacturingAndProcess: React.FC<ManufacturingAndProcessProps> = (
             {/* Right Quality Seal Note */}
             <div className="lg:w-60 flex-shrink-0 flex items-center space-x-2.5 lg:justify-end border-t lg:border-t-0 pt-4 lg:pt-0 border-gray-100">
               <span className="w-2 h-2 rounded-full bg-[#D71920] animate-pulse flex-shrink-0" />
-              <span className="font-poppins font-bold text-[11px] uppercase tracking-wider text-[#111418]">
+              <span className="font-poppins font-bold text-[11px] uppercase tracking-wider text-[#58585A]">
                 QUALITY ASSURED AT EVERY STEP
               </span>
             </div>

@@ -187,7 +187,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
           </div>
 
           {/* Product Title: Poppins 800 ExtraBold */}
-          <h3 className="font-poppins font-extrabold text-[23px] sm:text-[26px] lg:text-[28px] leading-[0.98] tracking-[-0.025em] text-[#111418] group-hover:text-[#D71920] transition-colors mb-1.5">
+          <h3 className="font-poppins font-extrabold text-[23px] sm:text-[26px] lg:text-[28px] leading-[0.98] tracking-[-0.025em] text-[#58585A] group-hover:text-[#D71920] transition-colors mb-1.5">
             {prod.name.map((line, i) => (
               <span key={i} className="block">{line}</span>
             ))}
@@ -207,7 +207,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
               <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
                 Pressure
               </span>
-              <span className="font-semibold text-[#111418] text-right">
+              <span className="font-semibold text-[#58585A] text-right">
                 {prod.pressure.split('/')[0].trim()}
               </span>
             </div>
@@ -216,7 +216,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
               <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
                 Size Range
               </span>
-              <span className="font-semibold text-[#111418] text-right">
+              <span className="font-semibold text-[#58585A] text-right">
                 {prod.sizeRange.split('(')[0].trim()}
               </span>
             </div>
@@ -225,7 +225,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
               <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
                 Application
               </span>
-              <span className="font-semibold text-[#111418] text-right leading-tight">
+              <span className="font-semibold text-[#58585A] text-right leading-tight">
                 {prod.application}
               </span>
             </div>
@@ -234,7 +234,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
               <span className="font-medium text-[#6B7280] text-[10px] sm:text-[10.5px] uppercase tracking-wider flex-shrink-0">
                 Configuration
               </span>
-              <span className="font-semibold text-[#111418] text-right leading-tight">
+              <span className="font-semibold text-[#58585A] text-right leading-tight">
                 {prod.configuration}
               </span>
             </div>
@@ -275,7 +275,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
               OUR PRODUCTS
             </span>
             <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
-              <span className="text-[#111418] block">ENGINEERED</span>
+              <span className="text-[#58585A] block">ENGINEERED</span>
               <span className="text-[#D71920] block">FOR CONTROL</span>
             </h2>
             <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
@@ -287,7 +287,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
               <span className="font-poppins font-extrabold text-[28px] sm:text-[32px] text-[#D71920] leading-none">
                 06
               </span>
-              <span className="font-poppins font-bold text-[14px] uppercase tracking-[0.14em] text-[#111418]">
+              <span className="font-poppins font-bold text-[14px] uppercase tracking-[0.14em] text-[#58585A]">
                 SYSTEMS
               </span>
             </div>
@@ -327,7 +327,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
           
           {/* Subtle Technical linework in background */}
           <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-[0.03] pointer-events-none">
-            <svg viewBox="0 0 200 100" fill="none" stroke="currentColor" className="w-full h-full text-black">
+            <svg viewBox="0 0 200 100" fill="none" stroke="currentColor" className="w-full h-full text-[#58585A]">
               <circle cx="100" cy="50" r="40" strokeWidth="1" strokeDasharray="3 3" />
               <line x1="0" y1="50" x2="200" y2="50" strokeWidth="1" />
               <line x1="100" y1="0" x2="100" y2="100" strokeWidth="1" />
@@ -340,7 +340,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
               <Shield size={22} />
             </div>
             <div>
-              <div className="font-poppins font-bold text-[11px] uppercase tracking-[0.12em] text-[#111418]">
+              <div className="font-poppins font-bold text-[11px] uppercase tracking-[0.12em] text-[#58585A]">
                 BUILT FOR CRITICAL APPLICATIONS.
               </div>
               <div className="font-poppins font-semibold text-[10px] uppercase tracking-[0.14em] text-[#6B7280]">
@@ -352,7 +352,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
           {/* Center: Main Statement */}
           <div className="text-center md:text-left">
             <h4 className="font-poppins font-extrabold text-[22px] sm:text-[26px] leading-tight">
-              <span className="text-[#111418]">CONTROL HAS NO ROOM </span>
+              <span className="text-[#58585A]">CONTROL HAS NO ROOM </span>
               <span className="text-[#D71920]">FOR COMPROMISE.</span>
             </h4>
           </div>
@@ -361,7 +361,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
           <div className="text-center md:text-right">
             <p className="font-poppins text-[12px] text-[#6B7280] leading-snug">
               Engineered for critical applications.<br />
-              <strong className="text-[#111418] font-medium">Built to perform. Always.</strong>
+              <strong className="text-[#58585A] font-medium">Built to perform. Always.</strong>
             </p>
           </div>
 
@@ -384,7 +384,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
           <div className="bg-white rounded-[16px] max-w-xl w-full p-6 sm:p-8 relative shadow-2xl border-t-4 border-[#D71920] animate-scaleIn">
             <button
               onClick={() => setSelectedProductModal(null)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-[#111418] text-xl font-bold w-9 h-9 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+              className="absolute top-4 right-4 text-gray-400 hover:text-[#58585A] text-xl font-bold w-9 h-9 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
               aria-label="Close"
             >
               <X size={20} />
@@ -405,7 +405,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
                 <span className="text-[10px] font-poppins font-bold uppercase tracking-wider text-[#D71920] bg-red-50 px-2.5 py-1 rounded-[4px]">
                   {selectedProductModal.num} • {selectedProductModal.type}
                 </span>
-                <h3 className="font-poppins font-extrabold text-2xl sm:text-3xl uppercase text-[#111418] mt-2 leading-none">
+                <h3 className="font-poppins font-extrabold text-2xl sm:text-3xl uppercase text-[#58585A] mt-2 leading-none">
                   {selectedProductModal.name.join(' ')}
                 </h3>
                 <p className="font-poppins text-xs text-[#5B5F66] mt-2 leading-relaxed">
@@ -418,19 +418,19 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
             <div className="bg-gray-50 rounded-[10px] p-4 border border-gray-200 text-xs space-y-2.5 mb-6 font-poppins">
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span className="font-medium text-[#6B7280]">Size Range:</span>
-                <span className="font-bold text-[#111418]">{selectedProductModal.sizeRange}</span>
+                <span className="font-bold text-[#58585A]">{selectedProductModal.sizeRange}</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span className="font-medium text-[#6B7280]">Pressure Rating:</span>
-                <span className="font-bold text-[#111418]">{selectedProductModal.pressure}</span>
+                <span className="font-bold text-[#58585A]">{selectedProductModal.pressure}</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span className="font-medium text-[#6B7280]">Design Standards:</span>
-                <span className="font-bold text-[#111418]">{selectedProductModal.standards}</span>
+                <span className="font-bold text-[#58585A]">{selectedProductModal.standards}</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium text-[#6B7280]">Standard Metallurgy:</span>
-                <span className="font-bold text-[#111418]">{selectedProductModal.materials}</span>
+                <span className="font-bold text-[#58585A]">{selectedProductModal.materials}</span>
               </div>
             </div>
 
@@ -438,7 +438,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
             <div className="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
               <button
                 onClick={() => setSelectedProductModal(null)}
-                className="w-full sm:w-auto px-5 py-2.5 text-xs font-poppins font-bold text-[#6B7280] hover:text-[#111418] transition-colors"
+                className="w-full sm:w-auto px-5 py-2.5 text-xs font-poppins font-bold text-[#6B7280] hover:text-[#58585A] transition-colors"
               >
                 Close
               </button>

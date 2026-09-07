@@ -116,7 +116,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
         
         {/* Subtle Valve Blueprint Watermark on Right */}
         <div className="absolute right-4 top-12 w-96 h-96 opacity-[0.035] pointer-events-none select-none">
-          <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full text-black">
+          <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full text-[#58585A]">
             <circle cx="100" cy="100" r="75" strokeWidth="1.5" strokeDasharray="3 3" />
             <circle cx="100" cy="100" r="40" strokeWidth="2" />
             <line x1="20" y1="100" x2="180" y2="100" strokeWidth="1.5" />
@@ -136,7 +136,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
               </span>
 
               <h2 className="font-poppins font-extrabold text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] leading-[1.14] tracking-[-0.02em]">
-                <span className="text-[#111418] block">STRONG PERFORMANCE.</span>
+                <span className="text-[#58585A] block">STRONG PERFORMANCE.</span>
                 <span className="text-[#D71920] block">SUSTAINABLE GROWTH.</span>
               </h2>
 
@@ -211,7 +211,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
           {/* Col 3: Revenue Growth Bar Chart (~3.5 cols) */}
           <div className="lg:col-span-3 bg-white p-5 sm:p-6 rounded-[14px] border border-[#E5E7EB] shadow-[0_4px_20px_rgba(17,20,24,0.04)]">
             <div className="flex items-center justify-between mb-6 pb-2 border-b border-gray-100">
-              <span className="font-poppins font-bold text-[12px] uppercase tracking-wider text-[#111418]">
+              <span className="font-poppins font-bold text-[12px] uppercase tracking-wider text-[#58585A]">
                 REVENUE GROWTH (₹ CR)
               </span>
               <span className="font-poppins font-extrabold text-[12px] tracking-wider text-[#D71920]">
@@ -246,7 +246,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
             <div>
               <div className="flex items-center space-x-2 text-[#D71920] mb-1">
                 <Globe2 size={16} />
-                <span className="font-poppins font-bold text-[13px] text-[#111418]">Export Business 3%+</span>
+                <span className="font-poppins font-bold text-[13px] text-[#58585A]">Export Business 3%+</span>
               </div>
               <p className="text-[11px] font-poppins text-[#6B7280]">Growing overseas reach</p>
             </div>
@@ -254,7 +254,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
             <div>
               <div className="flex items-center space-x-2 text-[#D71920] mb-1">
                 <Users size={16} />
-                <span className="font-poppins font-bold text-[13px] text-[#111418]">Customers 100+</span>
+                <span className="font-poppins font-bold text-[13px] text-[#58585A]">Customers 100+</span>
               </div>
               <p className="text-[11px] font-poppins text-[#6B7280]">Marquee PSU & defence clients</p>
             </div>
@@ -262,7 +262,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
             <div>
               <div className="flex items-center space-x-2 text-[#D71920] mb-1">
                 <TrendingUp size={16} />
-                <span className="font-poppins font-bold text-[13px] text-[#111418]">Countries Served 12+</span>
+                <span className="font-poppins font-bold text-[13px] text-[#58585A]">Countries Served 12+</span>
               </div>
               <p className="text-[11px] font-poppins text-[#6B7280]">Global operational footprint</p>
             </div>
@@ -286,9 +286,9 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
             <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-2">
               GLOBAL PRESENCE
             </span>
-            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] text-[#111418] leading-[1.14] tracking-[-0.02em]">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] text-[#58585A] leading-[1.14] tracking-[-0.02em]">
               DELIVERING RELIABILITY<br />
-              <span className="text-[#111418]">ACROSS THE WORLD</span>
+              <span className="text-[#58585A]">ACROSS THE WORLD</span>
             </h2>
             <div className="w-9 h-[2.5px] bg-[#D71920] mt-3.5 mb-3.5" />
             <p className="font-poppins text-[#6B7280] text-[14px] sm:text-[15px] leading-relaxed">
@@ -320,7 +320,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
                 <div className="font-poppins font-extrabold text-[26px] text-[#D71920] leading-none">
                   {counts.regions}+
                 </div>
-                <div className="font-poppins font-bold text-[12px] uppercase text-[#111418] mt-0.5">
+                <div className="font-poppins font-bold text-[12px] uppercase text-[#58585A] mt-0.5">
                   REGIONS
                 </div>
                 <div className="text-[11px] text-[#6B7280]">Worldwide Presence</div>
@@ -335,7 +335,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
                 <div className="font-poppins font-extrabold text-[26px] text-[#D71920] leading-none">
                   {counts.countries}+
                 </div>
-                <div className="font-poppins font-bold text-[12px] uppercase text-[#111418] mt-0.5">
+                <div className="font-poppins font-bold text-[12px] uppercase text-[#58585A] mt-0.5">
                   COUNTRIES
                 </div>
                 <div className="text-[11px] text-[#6B7280]">Trusted Globally</div>
@@ -350,7 +350,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
                 <div className="font-poppins font-extrabold text-[26px] text-[#D71920] leading-none">
                   {counts.partners}+
                 </div>
-                <div className="font-poppins font-bold text-[12px] uppercase text-[#111418] mt-0.5">
+                <div className="font-poppins font-bold text-[12px] uppercase text-[#58585A] mt-0.5">
                   PARTNERS
                 </div>
                 <div className="text-[11px] text-[#6B7280]">Strong Global Network</div>
@@ -410,7 +410,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
                 <circle cx="620" cy="195" r="14" fill="#D71920" opacity="0.2" className="animate-map-pulse" />
                 <circle cx="620" cy="195" r="8" fill="#D71920" opacity="0.35" />
                 <circle cx="620" cy="195" r="4.5" fill="#D71920" stroke="#FFFFFF" strokeWidth="1.5" />
-                <text x="620" y="214" textAnchor="middle" fill="#111418" fontSize="10" fontWeight="800" fontFamily="Poppins">
+                <text x="620" y="214" textAnchor="middle" fill="#58585A" fontSize="10" fontWeight="800" fontFamily="Poppins">
                   INDIA HQ
                 </text>
               </g>
@@ -470,7 +470,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
                 <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm px-3.5 py-2 rounded-[6px] border border-gray-200 shadow-sm text-xs font-poppins z-20">
                   <div className="flex items-center space-x-2">
                     <span className="text-sm">{info.flag}</span>
-                    <strong className="text-[#111418] font-bold">{info.name}</strong>
+                    <strong className="text-[#58585A] font-bold">{info.name}</strong>
                     <span className="text-[10px] text-[#D71920] font-semibold uppercase">{info.label}</span>
                   </div>
                   <p className="text-[11px] text-[#6B7280] mt-0.5">{info.market}</p>
@@ -482,7 +482,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
 
           {/* KEY MARKETS PANEL (Col 10-12 ~ 25% width) */}
           <div className="lg:col-span-3 xl:col-span-3 bg-white rounded-[16px] border border-[#E5E7EB] p-5 shadow-xs">
-            <h4 className="font-poppins font-bold text-[13px] uppercase tracking-wider text-[#111418] pb-3 border-b border-gray-100 mb-3">
+            <h4 className="font-poppins font-bold text-[13px] uppercase tracking-wider text-[#58585A] pb-3 border-b border-gray-100 mb-3">
               KEY MARKETS
             </h4>
 
@@ -495,7 +495,7 @@ export const InvestorHighlights: React.FC<InvestorHighlightsProps> = ({ onOpenCo
                     onClick={() => setActiveMarket(m.name)}
                     className={`flex items-center justify-between p-2.5 rounded-[6px] cursor-pointer transition-all duration-200 text-xs font-poppins ${
                       isActive
-                        ? "bg-red-50/70 border-l-4 border-[#D71920] text-[#111418] font-bold shadow-2xs"
+                        ? "bg-red-50/70 border-l-4 border-[#D71920] text-[#58585A] font-bold shadow-2xs"
                         : "hover:bg-gray-50 text-[#4B5563]"
                     }`}
                   >

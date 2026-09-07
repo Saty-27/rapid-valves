@@ -173,7 +173,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
           </svg>
           {/* Tooltip on left */}
-          <span className="absolute right-full mr-2.5 px-2.5 py-1 bg-[#111418] text-white text-[11px] font-poppins font-medium rounded-[6px] shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+          <span className="absolute right-full mr-2.5 px-2.5 py-1 bg-[#58585A] text-white text-[11px] font-poppins font-medium rounded-[6px] shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
             Chat on WhatsApp
           </span>
         </a>
@@ -187,7 +187,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
         >
           <Phone size={18} />
           {/* Tooltip on left */}
-          <span className="absolute right-full mr-2.5 px-2.5 py-1 bg-[#111418] text-white text-[11px] font-poppins font-medium rounded-[6px] shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+          <span className="absolute right-full mr-2.5 px-2.5 py-1 bg-[#58585A] text-white text-[11px] font-poppins font-medium rounded-[6px] shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
             Call Sales Desk
           </span>
         </a>
@@ -195,13 +195,13 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
         {/* 3. Email Button (Sleek Dark Industrial) */}
         <button
           onClick={onOpenContact}
-          className="w-10 h-10 rounded-[12px] bg-[#111418] hover:bg-[#1E232B] text-white flex items-center justify-center shadow-sm hover:scale-105 hover:shadow-md transition-all group relative cursor-pointer"
+          className="w-10 h-10 rounded-[12px] bg-[#58585A] hover:bg-[#1E232B] text-white flex items-center justify-center shadow-sm hover:scale-105 hover:shadow-md transition-all group relative cursor-pointer"
           title="Email Sales Department"
           aria-label="Email"
         >
           <Mail size={18} />
           {/* Tooltip on left */}
-          <span className="absolute right-full mr-2.5 px-2.5 py-1 bg-[#111418] text-white text-[11px] font-poppins font-medium rounded-[6px] shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+          <span className="absolute right-full mr-2.5 px-2.5 py-1 bg-[#58585A] text-white text-[11px] font-poppins font-medium rounded-[6px] shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
             Request a Quote / Email
           </span>
         </button>
@@ -215,7 +215,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
         
         {/* Greeting Tooltip Bubble */}
         {!chatOpen && showTooltip && (
-          <div className="hidden sm:flex items-center bg-white border border-gray-200 text-[#111418] text-xs font-semibold px-4 py-2.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.12)] relative animate-bounce font-poppins">
+          <div className="hidden sm:flex items-center bg-white border border-gray-200 text-[#58585A] text-xs font-semibold px-4 py-2.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.12)] relative animate-bounce font-poppins">
             <span>Hi! How can we help you today?</span>
             <button
               onClick={(e) => {
@@ -236,7 +236,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
             setChatOpen(!chatOpen);
             setShowTooltip(false);
           }}
-          className="w-14 h-14 rounded-full bg-[#111418] hover:bg-[#1E232B] text-white flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-300 relative group border-2 border-white cursor-pointer hover:scale-105 p-1 overflow-hidden"
+          className="w-14 h-14 rounded-full bg-[#58585A] hover:bg-[#1E232B] text-white flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-300 relative group border-2 border-white cursor-pointer hover:scale-105 p-1 overflow-hidden"
           aria-label="Open Rappid AI Engineer"
           title="Open Rappid AI Engineer"
         >
@@ -269,7 +269,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
         <div className="fixed bottom-24 right-4 sm:right-6 z-50 w-[360px] sm:w-[410px] max-h-[85vh] h-[640px] bg-white rounded-[22px] shadow-[0_24px_60px_rgba(0,0,0,0.25)] border border-gray-200/80 overflow-hidden flex flex-col animate-fadeIn font-poppins">
           
           {/* 1. Header (Dark Navy/Graphite) */}
-          <div className="bg-[#111418] px-4 py-3 text-white flex items-center justify-between border-b border-gray-800 flex-shrink-0">
+          <div className="bg-[#58585A] px-4 py-3 text-white flex items-center justify-between border-b border-gray-800 flex-shrink-0">
             {/* Left: Avatar + Title + Status */}
             <div className="flex items-center space-x-2.5">
               <div className="w-8 h-8 rounded-full bg-[#1A181C] border border-gray-700 overflow-hidden flex items-center justify-center flex-shrink-0">
@@ -334,7 +334,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
                 </div>
 
                 {/* Title & Subtitle */}
-                <h3 className="font-poppins font-bold text-lg text-[#111418] mt-3">
+                <h3 className="font-poppins font-bold text-lg text-[#58585A] mt-3">
                   Rappid AI Engineer
                 </h3>
                 <p className="font-poppins text-xs text-gray-500 max-w-[260px] mx-auto mt-1 leading-snug">
@@ -355,7 +355,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
                           <IconComp size={15} strokeWidth={2.2} />
                         </div>
                         <div>
-                          <div className="font-poppins font-bold text-[12px] text-[#111418] leading-tight group-hover:text-[#D71920] transition-colors">
+                          <div className="font-poppins font-bold text-[12px] text-[#58585A] leading-tight group-hover:text-[#D71920] transition-colors">
                             {act.title}
                           </div>
                           <div className="font-poppins text-[10px] text-gray-400 mt-0.5">
@@ -456,7 +456,7 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({ onOpenContact }) => 
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Ask anything technical..."
-                className="flex-1 text-xs text-[#111418] placeholder-gray-400 focus:outline-none bg-transparent font-poppins min-w-0"
+                className="flex-1 text-xs text-[#58585A] placeholder-gray-400 focus:outline-none bg-transparent font-poppins min-w-0"
               />
 
               {/* Red Rounded Send Button */}

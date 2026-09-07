@@ -16,14 +16,14 @@ export const MDMessageSection: React.FC = () => {
       <div 
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(#111418 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#58585A 1px, transparent 1px)',
           backgroundSize: '28px 28px'
         }}
       />
 
       {/* Blueprint Schematic Linework in Background */}
       <div className="absolute left-[-60px] bottom-[-40px] w-96 h-96 opacity-[0.03] pointer-events-none">
-        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full text-black">
+        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full text-[#58585A]">
           <circle cx="100" cy="100" r="80" strokeWidth="2" strokeDasharray="6 6" />
           <circle cx="100" cy="100" r="50" strokeWidth="1.5" />
           <line x1="20" y1="100" x2="180" y2="100" strokeWidth="2" />
@@ -62,7 +62,7 @@ export const MDMessageSection: React.FC = () => {
               
               {/* Blueprint Valve Sketch Behind Person */}
               <div className="absolute top-4 right-4 w-48 h-48 opacity-[0.06] pointer-events-none">
-                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" className="w-full h-full text-black">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" className="w-full h-full text-[#58585A]">
                   <circle cx="50" cy="50" r="40" strokeWidth="1.5" strokeDasharray="3 3" />
                   <rect x="25" y="45" width="50" height="10" strokeWidth="1.5" />
                   <line x1="50" y1="10" x2="50" y2="45" strokeWidth="2" />
@@ -83,7 +83,7 @@ export const MDMessageSection: React.FC = () => {
 
               {/* Floating Director Identity Card */}
               <div
-                className={`absolute bottom-6 left-6 right-6 sm:right-auto sm:max-w-xs bg-[#111418] rounded-[14px] p-3.5 sm:p-4 shadow-2xl border-l-4 border-[#D71920] z-20 flex items-center space-x-3.5 backdrop-blur-xs transform-gpu transition-all duration-700 delay-300 ease-apple ${
+                className={`absolute bottom-6 left-6 right-6 sm:right-auto sm:max-w-xs bg-[#58585A] rounded-[14px] p-3.5 sm:p-4 shadow-2xl border-l-4 border-[#D71920] z-20 flex items-center space-x-3.5 backdrop-blur-xs transform-gpu transition-all duration-700 delay-300 ease-apple ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
               >
@@ -118,7 +118,7 @@ export const MDMessageSection: React.FC = () => {
               </span>
 
               <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
-                <span className="text-[#111418] block sm:inline">MANAGING DIRECTOR’S </span>
+                <span className="text-[#58585A] block sm:inline">MANAGING DIRECTOR’S </span>
                 <span className="text-[#D71920] block sm:inline">MESSAGE</span>
               </h2>
 
@@ -164,7 +164,7 @@ export const MDMessageSection: React.FC = () => {
               {/* Left: Signature & Title */}
               <div>
                 <div className="mb-2">
-                  <span className="font-serif italic text-2xl sm:text-3xl text-[#111418] font-bold tracking-wide select-none">
+                  <span className="font-serif italic text-2xl sm:text-3xl text-[#58585A] font-bold tracking-wide select-none">
                     Gaurav Dalal
                   </span>
                 </div>
@@ -187,7 +187,7 @@ export const MDMessageSection: React.FC = () => {
                 {/* Center Badge */}
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-md border border-gray-200 flex flex-col items-center justify-center text-center p-1">
                   <span className="text-[10px] text-[#D71920]">✦</span>
-                  <span className="font-poppins font-extrabold text-[6.5px] sm:text-[7px] tracking-wider text-[#111418] uppercase leading-tight">
+                  <span className="font-poppins font-extrabold text-[6.5px] sm:text-[7px] tracking-wider text-[#58585A] uppercase leading-tight">
                     LEADERSHIP
                   </span>
                   <span className="font-poppins font-bold text-[6.5px] tracking-[0.12em] text-gray-500 uppercase">

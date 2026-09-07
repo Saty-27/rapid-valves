@@ -98,7 +98,7 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
       
       {/* Extremely subtle engineering linework in background */}
       <div className="absolute inset-0 opacity-[0.035] pointer-events-none select-none">
-        <svg viewBox="0 0 1200 600" fill="none" stroke="currentColor" className="w-full h-full text-black">
+        <svg viewBox="0 0 1200 600" fill="none" stroke="currentColor" className="w-full h-full text-[#58585A]">
           <line x1="0" y1="150" x2="1200" y2="150" strokeDasharray="6 6" />
           <line x1="0" y1="450" x2="1200" y2="450" strokeDasharray="6 6" />
           <line x1="380" y1="0" x2="380" y2="600" strokeDasharray="6 6" />
@@ -124,8 +124,8 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
 
             {/* Main Headline */}
             <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
-              <span className="text-[#111418] block">ENGINEERING EXCELLENCE.</span>
-              <span className="text-[#111418]">DELIVERING </span>
+              <span className="text-[#58585A] block">ENGINEERING EXCELLENCE.</span>
+              <span className="text-[#58585A]">DELIVERING </span>
               <span className="text-[#D71920]">REAL SOLUTIONS.</span>
             </h2>
 
@@ -158,7 +158,7 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
               className={`font-poppins text-xs font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-[4px] transition-all cursor-pointer whitespace-nowrap ${
                 activeFilter === cat
                   ? "bg-[#D71920] text-white shadow-2xs"
-                  : "text-[#6B7280] hover:text-[#111418] hover:bg-gray-100"
+                  : "text-[#6B7280] hover:text-[#58585A] hover:bg-gray-100"
               }`}
             >
               {cat}
@@ -425,7 +425,7 @@ export const ProjectGallerySection: React.FC<ProjectGallerySectionProps> = ({ on
           </button>
 
           {/* Main Lightbox Card */}
-          <div className="bg-[#111418] border border-gray-800 rounded-[18px] overflow-hidden max-w-4xl w-full shadow-2xl flex flex-col max-h-[90vh]">
+          <div className="bg-[#58585A] border border-gray-800 rounded-[18px] overflow-hidden max-w-4xl w-full shadow-2xl flex flex-col max-h-[90vh]">
             
             <div className="relative flex-1 bg-black flex items-center justify-center min-h-[300px] sm:min-h-[440px] overflow-hidden">
               <img

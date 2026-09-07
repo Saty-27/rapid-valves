@@ -88,7 +88,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >
-                <span className="text-[#111418]">ABOUT </span>
+                <span className="text-[#58585A]">ABOUT </span>
                 <span className="text-[#D71920]">RAPID VALVES</span>
               </h2>
 
@@ -101,7 +101,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
-              <strong className="text-[#111418] font-semibold">Rappid Valves</strong> — We are an Engineering company which builds Valve solutions across sectors as per Industry standards. Our technical solutions build precision control systems to ensure longevity in various conditions. Our International standard factory manufactures and exports valves for critical applications in industries such as Hydrocarbon, Marine, Shipbuilding, Distillery, Brewery, Chemical, Power, Mining & General industry. We can meet your biggest challenges in Fluid motion control with our inbuilt Product quality, Design & Development Expertise in engineering, project management, and efficient service.
+              <strong className="text-[#58585A] font-semibold">Rappid Valves</strong> — We are an Engineering company which builds Valve solutions across sectors as per Industry standards. Our technical solutions build precision control systems to ensure longevity in various conditions. Our International standard factory manufactures and exports valves for critical applications in industries such as Hydrocarbon, Marine, Shipbuilding, Distillery, Brewery, Chemical, Power, Mining & General industry. We can meet your biggest challenges in Fluid motion control with our inbuilt Product quality, Design & Development Expertise in engineering, project management, and efficient service.
             </p>
 
             {/* 4 Feature Badges in a Row */}
@@ -120,7 +120,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
                     </div>
 
                     {/* Title */}
-                    <div className="text-[13px] font-poppins font-bold text-[#171A1F] leading-tight">
+                    <div className="text-[13px] font-poppins font-bold text-[#58585A] leading-tight">
                       {feat.title}
                     </div>
 
@@ -141,7 +141,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
             >
               <button
                 onClick={onKnowMore}
-                className="inline-flex items-center space-x-2 text-sm font-poppins font-bold text-[#171A1F] hover:text-[#D71920] transition-colors group cursor-pointer"
+                className="inline-flex items-center space-x-2 text-sm font-poppins font-bold text-[#58585A] hover:text-[#D71920] transition-colors group cursor-pointer"
               >
                 <span>Know More About Us</span>
                 <ArrowRight size={15} className="text-[#D71920] group-hover:translate-x-1.5 transition-transform duration-200" />
@@ -181,7 +181,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore, onSelect
 
                   {/* Circular White Expand Button */}
                   <div className="absolute bottom-4 right-4 z-10">
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 text-[#171A1F] hover:bg-[#D71920] hover:text-white flex items-center justify-center shadow-md transition-all duration-200 group-hover:scale-110">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 text-[#58585A] hover:bg-[#D71920] hover:text-white flex items-center justify-center shadow-md transition-all duration-200 group-hover:scale-110">
                       <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>

@@ -158,14 +158,14 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
       <div 
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(#111418 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#58585A 1px, transparent 1px)',
           backgroundSize: '28px 28px'
         }}
       />
 
       {/* Subtle Upper-Right Industrial Valve Technical Blueprint Line Drawing */}
       <div className="absolute right-4 lg:right-16 top-6 w-[480px] h-[340px] opacity-[0.06] pointer-events-none hidden md:block">
-        <svg viewBox="0 0 400 300" fill="none" stroke="#111418" strokeWidth="1.2" className="w-full h-full">
+        <svg viewBox="0 0 400 300" fill="none" stroke="#58585A" strokeWidth="1.2" className="w-full h-full">
           {/* Handwheel */}
           <ellipse cx="200" cy="50" rx="75" ry="18" strokeDasharray="3 2" />
           <circle cx="200" cy="50" r="10" />
@@ -176,20 +176,20 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
           <path d="M 170 110 L 195 130 L 205 130 L 230 110" />
           {/* Bonnet & Flange */}
           <rect x="160" y="130" width="80" height="20" rx="3" />
-          <circle cx="170" cy="140" r="2.5" fill="#111418" />
-          <circle cx="230" cy="140" r="2.5" fill="#111418" />
+          <circle cx="170" cy="140" r="2.5" fill="#58585A" />
+          <circle cx="230" cy="140" r="2.5" fill="#58585A" />
           {/* Valve Body */}
           <path d="M 140 150 C 140 220, 260 220, 260 150 Z" />
           {/* Left Flange & Pipe */}
           <rect x="80" y="165" width="20" height="70" rx="2" />
           <rect x="100" y="175" width="45" height="50" />
-          <circle cx="90" cy="180" r="2.5" fill="#111418" />
-          <circle cx="90" cy="220" r="2.5" fill="#111418" />
+          <circle cx="90" cy="180" r="2.5" fill="#58585A" />
+          <circle cx="90" cy="220" r="2.5" fill="#58585A" />
           {/* Right Flange & Pipe */}
           <rect x="300" y="165" width="20" height="70" rx="2" />
           <rect x="255" y="175" width="45" height="50" />
-          <circle cx="310" cy="180" r="2.5" fill="#111418" />
-          <circle cx="310" cy="220" r="2.5" fill="#111418" />
+          <circle cx="310" cy="180" r="2.5" fill="#58585A" />
+          <circle cx="310" cy="220" r="2.5" fill="#58585A" />
           {/* Centerline & Measurement Grid */}
           <line x1="50" y1="200" x2="350" y2="200" strokeDasharray="6 4" stroke="#D71920" strokeWidth="0.8" opacity="0.4" />
           <line x1="200" y1="20" x2="200" y2="260" strokeDasharray="6 4" stroke="#D71920" strokeWidth="0.8" opacity="0.4" />
@@ -215,7 +215,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
             </span>
 
             {/* Main Heading */}
-            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em] text-[#111418]">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em] text-[#58585A]">
               <span>FREQUENTLY ASKED </span>
               <span className="text-[#D71920] block sm:inline">QUESTIONS.</span>
             </h2>
@@ -240,7 +240,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
               <div className="text-[#D71920] text-base my-0.5 font-bold leading-none">
                 ✦
               </div>
-              <span className="font-poppins font-extrabold text-[7.5px] tracking-wider text-[#111418] uppercase leading-none">
+              <span className="font-poppins font-extrabold text-[7.5px] tracking-wider text-[#58585A] uppercase leading-none">
                 FOR
               </span>
               <span className="font-poppins font-bold text-[7px] tracking-wider text-gray-500 uppercase leading-none mt-0.5">
@@ -301,7 +301,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
                       onClick={() => handleTopicClick(topic.id)}
                       className={`w-full flex items-center space-x-3.5 py-3.5 px-3 transition-all text-left group cursor-pointer ${
                         isActive
-                          ? "bg-white border-l-[3.5px] border-l-[#D71920] text-[#111418] shadow-2xs font-semibold"
+                          ? "bg-white border-l-[3.5px] border-l-[#D71920] text-[#58585A] shadow-2xs font-semibold"
                           : "hover:bg-gray-100/70 text-[#4B5563]"
                       }`}
                     >
@@ -325,7 +325,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
                   <PhoneCall size={18} strokeWidth={2.2} />
                 </div>
                 <div>
-                  <h4 className="font-poppins font-extrabold text-[15px] leading-tight text-[#111418]">
+                  <h4 className="font-poppins font-extrabold text-[15px] leading-tight text-[#58585A]">
                     STILL HAVE <span className="text-[#D71920]">QUESTIONS?</span>
                   </h4>
                 </div>
@@ -380,7 +380,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenContact }) => {
                       </span>
 
                       {/* Question Text */}
-                      <span className="font-poppins font-semibold text-[14px] sm:text-[15.5px] text-[#111418] group-hover:text-[#D71920] transition-colors leading-snug">
+                      <span className="font-poppins font-semibold text-[14px] sm:text-[15.5px] text-[#58585A] group-hover:text-[#D71920] transition-colors leading-snug">
                         {item.question}
                       </span>
                     </div>

@@ -49,7 +49,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-brand-charcoal flex flex-col relative font-sans selection:bg-brand-red selection:text-white">
+    <div className="min-h-screen bg-white text-[#58585A] flex flex-col relative font-poppins selection:bg-[#D71920] selection:text-white">
       
       {/* Subtle Top Scroll Reading Progress */}
       <ScrollProgressBar />

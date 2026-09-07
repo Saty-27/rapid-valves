@@ -8,21 +8,23 @@ export default {
     extend: {
       colors: {
         brand: {
-          red: "#E31E24",
-          redDark: "#C4151B",
+          red: "#D71920",
+          redDark: "#B8141A",
           redLight: "#FFF1F1",
           navy: "#0B0F14",
           navyCard: "#111418",
-          charcoal: "#1A1A1A",
-          body: "#5B5F66",
+          charcoal: "#58585A",
+          darkGray: "#58585A",
+          rapidGray: "#58585A",
+          body: "#58585A",
           lightGrey: "#F7F8FA",
           borderGrey: "#E2E5EB",
           steelGrey: "#8E9199"
         }
       },
       fontFamily: {
-        heading: ['"Barlow Condensed"', 'sans-serif'],
-        sans: ['Inter', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
       boxShadow: {

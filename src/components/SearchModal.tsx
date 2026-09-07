@@ -51,7 +51,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search products, pressure classes, materials, approvals, industries..."
-            className="flex-1 bg-transparent text-sm text-gray-900 placeholder-gray-400 focus:outline-none"
+            className="flex-1 bg-transparent text-sm text-[#58585A] placeholder-gray-400 focus:outline-none"
           />
           {searchTerm && (
             <button
@@ -63,7 +63,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           )}
           <button
             onClick={onClose}
-            className="p-1 rounded-full text-gray-400 hover:text-gray-900 hover:bg-gray-200"
+            className="p-1 rounded-full text-gray-400 hover:text-[#58585A] hover:bg-gray-200"
           >
             <X size={20} />
           </button>
@@ -91,7 +91,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                     }`}>
                       {item.type}
                     </span>
-                    <h5 className="font-heading font-bold text-sm text-gray-900 group-hover:text-brand-red transition-colors">
+                    <h5 className="font-heading font-bold text-sm text-[#58585A] group-hover:text-brand-red transition-colors">
                       {item.title}
                     </h5>
                   </div>

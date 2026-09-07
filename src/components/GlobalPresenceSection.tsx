@@ -112,7 +112,7 @@ export const GlobalPresenceSection: React.FC<GlobalPresenceProps> = ({ onExplore
 
           {/* Plain Text List of Countries (~2 cols) */}
           <div className="lg:col-span-2 bg-white p-5 rounded-sm border border-gray-200 shadow-sm">
-            <h4 className="font-heading font-black text-sm uppercase text-gray-900 border-b border-gray-200 pb-2 mb-3 tracking-wider">
+            <h4 className="font-heading font-black text-sm uppercase text-[#58585A] border-b border-gray-200 pb-2 mb-3 tracking-wider">
               KEY MARKETS
             </h4>
             <ul className="space-y-2.5">

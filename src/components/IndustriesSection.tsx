@@ -123,7 +123,7 @@ export const IndustriesSection: React.FC = () => {
 
             {/* Main Headline */}
             <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
-              <span className="text-[#111418]">INDUSTRIES </span>
+              <span className="text-[#58585A]">INDUSTRIES </span>
               <span className="text-[#D71920]">WE SERVE</span>
             </h2>
 
@@ -243,7 +243,7 @@ export const IndustriesSection: React.FC = () => {
               </p>
 
               <div className="mb-6">
-                <div className="text-[11px] font-poppins font-bold uppercase tracking-[0.14em] text-[#171A1F] mb-3">
+                <div className="text-[11px] font-poppins font-bold uppercase tracking-[0.14em] text-[#58585A] mb-3">
                   Key Valve Applications:
                 </div>
                 <div className="grid grid-cols-1 gap-2">
@@ -259,7 +259,7 @@ export const IndustriesSection: React.FC = () => {
               <div className="flex items-center justify-end space-x-3 pt-4 border-t border-gray-100">
                 <button
                   onClick={() => setActiveIndustry(null)}
-                  className="px-4 py-2 text-xs font-poppins font-semibold text-[#5B5F66] hover:text-[#171A1F]"
+                  className="px-4 py-2 text-xs font-poppins font-semibold text-[#5B5F66] hover:text-[#58585A]"
                 >
                   Close
                 </button>

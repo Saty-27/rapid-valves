@@ -133,14 +133,14 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenContact }) => {
       <div 
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(#111418 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#58585A 1px, transparent 1px)',
           backgroundSize: '32px 32px'
         }}
       />
 
       {/* Blueprint Valve Sketch in Right Background */}
       <div className="absolute right-[-40px] top-10 w-[420px] h-[420px] opacity-[0.035] pointer-events-none hidden xl:block">
-        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full text-black">
+        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full text-[#58585A]">
           <circle cx="100" cy="100" r="70" strokeWidth="1.5" strokeDasharray="4 4" />
           <line x1="30" y1="100" x2="170" y2="100" strokeWidth="2" />
           <line x1="100" y1="30" x2="100" y2="170" strokeWidth="2" />
@@ -165,7 +165,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenContact }) => {
 
           {/* Main Headline */}
           <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.14] tracking-[-0.02em]">
-            <span className="text-[#111418]">INSIGHTS. INNOVATION. </span>
+            <span className="text-[#58585A]">INSIGHTS. INNOVATION. </span>
             <span className="text-[#D71920]">IMPACT.</span>
           </h2>
 
@@ -225,7 +225,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenContact }) => {
                   </div>
 
                   {/* Article Title */}
-                  <h3 className="font-poppins font-bold text-[17px] sm:text-[18px] text-[#111418] leading-[1.3] tracking-tight group-hover:text-[#D71920] transition-colors mb-2.5 line-clamp-2">
+                  <h3 className="font-poppins font-bold text-[17px] sm:text-[18px] text-[#58585A] leading-[1.3] tracking-tight group-hover:text-[#D71920] transition-colors mb-2.5 line-clamp-2">
                     {post.title}
                   </h3>
 

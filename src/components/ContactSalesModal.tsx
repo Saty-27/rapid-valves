@@ -45,7 +45,7 @@ export const ContactSalesModal: React.FC<ContactSalesModalProps> = ({
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+          className="absolute top-4 right-4 text-gray-400 hover:text-[#58585A] w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
           aria-label="Close modal"
         >
           <X size={20} />

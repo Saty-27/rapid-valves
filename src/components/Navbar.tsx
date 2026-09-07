@@ -100,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             {/* 1. Home */}
             <a
               href="#"
-              className="font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-5 cursor-pointer whitespace-nowrap"
+              className="font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-5 cursor-pointer whitespace-nowrap"
             >
               Home
             </a>
@@ -113,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#about"
-                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>About</span>
                 <ChevronDown
@@ -149,7 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
                         onClick={() => setActiveMenu(null)}
                         className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/item transition-colors"
                       >
-                        <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/item:text-[#D71920] transition-colors">
+                        <div className="text-[12.5px] font-poppins font-semibold text-[#58585A] group-hover/item:text-[#D71920] transition-colors">
                           {item.name}
                         </div>
                         <div className="text-[10px] text-[#767B85] line-clamp-1">
@@ -170,7 +170,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#products"
-                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Products</span>
                 <ChevronDown
@@ -209,7 +209,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
                             onClick={() => setActiveMenu(null)}
                             className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/prod transition-colors"
                           >
-                            <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/prod:text-[#D71920] transition-colors">
+                            <div className="text-[12.5px] font-poppins font-semibold text-[#58585A] group-hover/prod:text-[#D71920] transition-colors">
                               {prod.name}
                             </div>
                             <div className="text-[10px] text-[#767B85]">
@@ -238,7 +238,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
                         <a
                           href="#products"
                           onClick={() => setActiveMenu(null)}
-                          className="inline-flex items-center justify-center w-full py-2 bg-white hover:bg-[#D71920] text-[#171A1F] hover:text-white border border-gray-200 hover:border-[#D71920] text-[10px] font-poppins font-bold uppercase tracking-wider rounded-sm transition-all"
+                          className="inline-flex items-center justify-center w-full py-2 bg-white hover:bg-[#D71920] text-[#58585A] hover:text-white border border-gray-200 hover:border-[#D71920] text-[10px] font-poppins font-bold uppercase tracking-wider rounded-sm transition-all"
                         >
                           <span>VIEW ALL PRODUCTS →</span>
                         </a>
@@ -257,7 +257,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#industries"
-                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Industries</span>
                 <ChevronDown
@@ -303,7 +303,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
                         }`}
                       >
                         <span className={`text-[12px] font-poppins font-medium transition-colors ${
-                          ind.core ? 'text-[#111418] font-semibold group-hover/ind:text-[#D71920]' : 'text-[#33373E] group-hover/ind:text-[#D71920]'
+                          ind.core ? 'text-[#58585A] font-semibold group-hover/ind:text-[#D71920]' : 'text-[#33373E] group-hover/ind:text-[#D71920]'
                         }`}>
                           {ind.name}
                         </span>
@@ -322,7 +322,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#industries"
-                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Marine & Defence</span>
                 <ChevronDown
@@ -358,7 +358,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
                         onClick={() => setActiveMenu(null)}
                         className="block px-3 py-2 rounded-sm hover:bg-red-50/70 group/item transition-colors"
                       >
-                        <div className="text-[12.5px] font-poppins font-semibold text-[#111418] group-hover/item:text-[#D71920] transition-colors">
+                        <div className="text-[12.5px] font-poppins font-semibold text-[#58585A] group-hover/item:text-[#D71920] transition-colors">
                           {item.name}
                         </div>
                         <div className="text-[10px] text-[#767B85] line-clamp-1">
@@ -379,7 +379,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#investors"
-                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Investors</span>
                 <ChevronDown
@@ -415,7 +415,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
                         onClick={() => setActiveMenu(null)}
                         className="block px-2.5 py-1.5 rounded-sm hover:bg-red-50/70 group/inv transition-colors"
                       >
-                        <div className="text-[12.5px] font-poppins font-semibold text-[#171A1F] group-hover/inv:text-[#D71920] transition-colors">
+                        <div className="text-[12.5px] font-poppins font-semibold text-[#58585A] group-hover/inv:text-[#D71920] transition-colors">
                           {item.name}
                         </div>
                         <div className="text-[10px] text-[#767B85] line-clamp-1">
@@ -435,7 +435,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className="inline-flex items-center font-poppins font-semibold text-[#1E232A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1 focus:outline-none"
+                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1 focus:outline-none"
               >
                 <span>View More</span>
                 <ChevronDown
@@ -472,7 +472,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
                         onClick={() => setActiveMenu(null)}
                         className="p-2.5 rounded-sm hover:bg-red-50/70 group/m transition-colors"
                       >
-                        <div className="text-[12.5px] font-poppins font-semibold text-[#111418] group-hover/m:text-[#D71920] transition-colors">
+                        <div className="text-[12.5px] font-poppins font-semibold text-[#58585A] group-hover/m:text-[#D71920] transition-colors">
                           {item.name}
                         </div>
                         <div className="text-[10px] text-[#767B85] line-clamp-1">
@@ -513,7 +513,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
           {/* Search Button */}
           <button
             onClick={onOpenSearch}
-            className="text-[#1E232A] hover:text-[#D71920] p-1.5 transition-all duration-150 rounded-full flex items-center justify-center cursor-pointer"
+            className="text-[#58585A] hover:text-[#D71920] p-1.5 transition-all duration-150 rounded-full flex items-center justify-center cursor-pointer"
             title="Search products & resources"
             aria-label="Search"
           >
@@ -553,14 +553,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             </a>
             <button
               onClick={onOpenSearch}
-              className="p-1.5 text-[#111418] hover:text-[#D71920]"
+              className="p-1.5 text-[#58585A] hover:text-[#D71920]"
               aria-label="Search"
             >
               <Search size={19} strokeWidth={1.8} />
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 text-[#111418] hover:text-[#D71920] focus:outline-none"
+              className="p-1.5 text-[#58585A] hover:text-[#D71920] focus:outline-none"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -582,7 +582,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               <a
                 href="#"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-poppins font-semibold text-[#111418] block"
+                className="text-base font-poppins font-semibold text-[#58585A] block"
               >
                 Home
               </a>
@@ -592,7 +592,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             <div className="border-b border-gray-100 pb-3">
               <div
                 onClick={() => toggleMobileSubmenu('about')}
-                className="flex justify-between items-center text-base font-poppins font-semibold text-[#111418] cursor-pointer"
+                className="flex justify-between items-center text-base font-poppins font-semibold text-[#58585A] cursor-pointer"
               >
                 <span>About</span>
                 <span className="text-lg text-gray-400">
@@ -614,7 +614,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             <div className="border-b border-gray-100 pb-3">
               <div
                 onClick={() => toggleMobileSubmenu('products')}
-                className="flex justify-between items-center text-base font-poppins font-semibold text-[#111418] cursor-pointer"
+                className="flex justify-between items-center text-base font-poppins font-semibold text-[#58585A] cursor-pointer"
               >
                 <span>Products</span>
                 <span className="text-lg text-gray-400">
@@ -637,7 +637,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             <div className="border-b border-gray-100 pb-3">
               <div
                 onClick={() => toggleMobileSubmenu('industries')}
-                className="flex justify-between items-center text-base font-poppins font-semibold text-[#111418] cursor-pointer"
+                className="flex justify-between items-center text-base font-poppins font-semibold text-[#58585A] cursor-pointer"
               >
                 <span>Industries</span>
                 <span className="text-lg text-gray-400">
@@ -646,8 +646,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               </div>
               {mobileExpanded === 'industries' && (
                 <div className="pl-3 mt-2 space-y-2 text-sm text-[#767B85]">
-                  <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Shipbuilding & Marine</a>
-                  <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Defence & Naval</a>
+                  <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#58585A]">Shipbuilding & Marine</a>
+                  <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#58585A]">Defence & Naval</a>
                   <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1">Oil & Gas</a>
                   <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1">Power Generation</a>
                   <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="block py-1">Chemical & Fertilizer</a>
@@ -659,7 +659,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             <div className="border-b border-gray-100 pb-3">
               <div
                 onClick={() => toggleMobileSubmenu('marine')}
-                className="flex justify-between items-center text-base font-poppins font-semibold text-[#111418] cursor-pointer"
+                className="flex justify-between items-center text-base font-poppins font-semibold text-[#58585A] cursor-pointer"
               >
                 <span className="text-[#D71920]">Marine & Defence</span>
                 <span className="text-lg text-[#D71920]">
@@ -680,7 +680,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             <div className="border-b border-gray-100 pb-3">
               <div
                 onClick={() => toggleMobileSubmenu('investors')}
-                className="flex justify-between items-center text-base font-poppins font-semibold text-[#111418] cursor-pointer"
+                className="flex justify-between items-center text-base font-poppins font-semibold text-[#58585A] cursor-pointer"
               >
                 <span>Investors</span>
                 <span className="text-lg text-gray-400">
@@ -701,7 +701,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             <div className="border-b border-gray-100 pb-3">
               <div
                 onClick={() => toggleMobileSubmenu('more')}
-                className="flex justify-between items-center text-base font-poppins font-semibold text-[#111418] cursor-pointer"
+                className="flex justify-between items-center text-base font-poppins font-semibold text-[#58585A] cursor-pointer"
               >
                 <span>View More</span>
                 <span className="text-lg text-gray-400">
@@ -710,9 +710,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               </div>
               {mobileExpanded === 'more' && (
                 <div className="pl-3 mt-2 space-y-2 text-sm text-[#767B85]">
-                  <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Engineering & R&D</a>
-                  <a href="#manufacturing" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Manufacturing Plant</a>
-                  <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#111418]">Resources & Standards</a>
+                  <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#58585A]">Engineering & R&D</a>
+                  <a href="#manufacturing" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#58585A]">Manufacturing Plant</a>
+                  <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-semibold text-[#58585A]">Resources & Standards</a>
                   <a href="#blog" onClick={() => setMobileMenuOpen(false)} className="block py-1">Blogs & Insights</a>
                   <a href="#media-solutions" onClick={() => setMobileMenuOpen(false)} className="block py-1">Video Gallery</a>
                   <a href="#gallery" onClick={() => setMobileMenuOpen(false)} className="block py-1">Project Gallery</a>

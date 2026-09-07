@@ -7,8 +7,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter', sans-serif;
-    color: #1A1A1A;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    color: #58585A;
   }
 }
 

@@ -83,7 +83,7 @@ export const VideoMediaSection: React.FC<VideoMediaSectionProps> = ({ onPlayVide
     <section id="media-showcase" className="pt-14 lg:pt-16 pb-6 lg:pb-8 bg-[#FAFAFA] border-t border-gray-200 select-none font-poppins relative overflow-hidden">
       
       {/* Extremely subtle technical grid background */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#111418 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#58585A 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
       <div className="max-w-[1580px] mx-auto px-6 sm:px-10 xl:px-14 relative z-10">
         
@@ -201,7 +201,7 @@ export const VideoMediaSection: React.FC<VideoMediaSectionProps> = ({ onPlayVide
                   <span className="font-poppins font-bold text-[12px] uppercase tracking-[0.18em] text-[#D71920] block mb-1">
                     PROJECT & SOLUTIONS
                   </span>
-                  <h3 className="font-poppins font-extrabold text-2xl sm:text-3xl text-[#111418] uppercase tracking-tight">
+                  <h3 className="font-poppins font-extrabold text-2xl sm:text-3xl text-[#58585A] uppercase tracking-tight">
                     INNOVATION <span className="text-[#D71920]">IN MOTION</span>
                   </h3>
                 </div>
@@ -225,7 +225,7 @@ export const VideoMediaSection: React.FC<VideoMediaSectionProps> = ({ onPlayVide
 
               {/* Sub-tagline banner matching reference */}
               <div className="bg-white border-l-4 border-[#D71920] border-y border-r border-gray-200/80 px-4 py-2 rounded-r-[6px] text-xs font-poppins text-[#3F4448]">
-                <strong className="text-[#111418] font-bold">Advanced Engineering.</strong> Smarter Solutions. Stronger Tomorrow.
+                <strong className="text-[#58585A] font-bold">Advanced Engineering.</strong> Smarter Solutions. Stronger Tomorrow.
               </div>
             </div>
 
