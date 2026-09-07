@@ -9,8 +9,9 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [scrollY, setScrollY] = useState(0);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
-  // Set video speed to 3x and guarantee autoplay on all browsers (plays once on initial load)
+  // Set video speed to 3x and guarantee autoplay on all browsers (plays smoothly without controls/buttons)
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.defaultMuted = true;
@@ -21,6 +22,7 @@ export const Hero: React.FC<HeroProps> = () => {
         playPromise
           .then(() => {
             if (videoRef.current) videoRef.current.playbackRate = 3.0;
+            setIsVideoReady(true);
           })
           .catch(() => {
             // Autoplay policy fallback
@@ -76,20 +78,42 @@ export const Hero: React.FC<HeroProps> = () => {
         className="absolute inset-0 w-full h-full bg-[#1A1F26] pointer-events-none"
       />
 
-      {/* True Full-Bleed Edge-to-Edge Video at 3x Speed (plays once, replays on banner hover) */}
+      {/* Seamless Poster Image displayed immediately with no play button while video buffers on slow CDN */}
+      <img
+        src="/images/hero-poster.jpg"
+        alt="Rappid Valves Engineering"
+        className={`absolute inset-0 w-full h-full object-cover object-center pointer-events-none transform-gpu transition-opacity duration-700 ${
+          isVideoReady ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
+        style={{
+          transform: `scale(${videoScale})`,
+          transformOrigin: 'center center',
+        }}
+      />
+
+      {/* True Full-Bleed Edge-to-Edge Video at 3x Speed (never shows native play button) */}
       <video
         ref={videoRef}
         autoPlay
         muted
+        loop
         playsInline
-        preload="metadata"
+        controls={false}
+        disablePictureInPicture
+        disableRemotePlayback
+        poster="/images/hero-poster.jpg"
+        preload="auto"
+        onCanPlay={() => setIsVideoReady(true)}
+        onPlaying={() => setIsVideoReady(true)}
         onLoadedMetadata={(e) => {
           e.currentTarget.playbackRate = 3.0;
         }}
         onPlay={(e) => {
           e.currentTarget.playbackRate = 3.0;
         }}
-        className="absolute -inset-[2px] w-[calc(100%+4px)] h-[calc(100%+4px)] object-cover object-center pointer-events-none transform-gpu"
+        className={`absolute -inset-[2px] w-[calc(100%+4px)] h-[calc(100%+4px)] object-cover object-center pointer-events-none transform-gpu transition-opacity duration-700 ${
+          isVideoReady ? 'opacity-100' : 'opacity-0'
+        }`}
         style={{
           transform: `scale(${videoScale})`,
           transformOrigin: 'center center',
