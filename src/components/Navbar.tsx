@@ -52,20 +52,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
     <header
       className={`fixed top-0 left-0 right-0 z-[1000] w-full transition-all duration-300 select-none ${
         isScrolled
-          ? 'bg-white/[0.98] backdrop-blur-[16px] border-b border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-[80px] lg:h-[86px]'
-          : 'bg-transparent border-none shadow-none h-[80px] lg:h-[86px]'
+          ? 'bg-white/[0.98] backdrop-blur-[16px] border-b border-gray-200/80 shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-[80px] lg:h-[86px]'
+          : 'bg-white/95 backdrop-blur-[16px] border-b border-gray-100/90 shadow-[0_2px_16px_rgba(0,0,0,0.04)] h-[80px] lg:h-[86px]'
       }`}
     >
-      {/* Single, continuous premium white gradient: protects logo and navigation with smooth seamless falloff */}
-      {!isScrolled && (
-        <div 
-          className="absolute top-0 left-0 right-0 h-[105px] sm:h-[110px] lg:h-[116px] pointer-events-none z-0"
-          style={{
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.96) 40%, rgba(255,255,255,0.90) 58%, rgba(255,255,255,0.72) 72%, rgba(255,255,255,0.42) 84%, rgba(255,255,255,0.15) 94%, rgba(255,255,255,0) 100%)'
-          }}
-          aria-hidden="true"
-        />
-      )}
 
       <div className="w-full h-full max-w-[1640px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-10 flex items-center justify-between relative z-10">
         
@@ -100,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             {/* 1. Home */}
             <a
               href="#"
-              className="font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-5 cursor-pointer whitespace-nowrap"
+              className="font-poppins font-medium text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 py-5 cursor-pointer whitespace-nowrap"
             >
               Home
             </a>
@@ -113,12 +103,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#about"
-                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-medium text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>About</span>
                 <ChevronDown
                   size={14}
-                  strokeWidth={2.4}
+                  strokeWidth={1.8}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'about' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -170,12 +160,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#products"
-                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-medium text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Products</span>
                 <ChevronDown
                   size={14}
-                  strokeWidth={2.4}
+                  strokeWidth={1.8}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'products' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -257,12 +247,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#industries"
-                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-medium text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Industries</span>
                 <ChevronDown
                   size={14}
-                  strokeWidth={2.4}
+                  strokeWidth={1.8}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'industries' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -322,12 +312,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#industries"
-                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-medium text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Marine & Defence</span>
                 <ChevronDown
                   size={14}
-                  strokeWidth={2.4}
+                  strokeWidth={1.8}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'marine' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -379,12 +369,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
             >
               <a
                 href="#investors"
-                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
+                className="inline-flex items-center font-poppins font-medium text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1"
               >
                 <span>Investors</span>
                 <ChevronDown
                   size={14}
-                  strokeWidth={2.4}
+                  strokeWidth={1.8}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'investors' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
@@ -435,12 +425,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenSearch }) =
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className="inline-flex items-center font-poppins font-semibold text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1 focus:outline-none"
+                className="inline-flex items-center font-poppins font-medium text-[#58585A] hover:text-[#D71920] tracking-normal transition-colors duration-150 cursor-pointer whitespace-nowrap py-1 focus:outline-none"
               >
                 <span>View More</span>
                 <ChevronDown
                   size={14}
-                  strokeWidth={2.4}
+                  strokeWidth={1.8}
                   className={`ml-1 transition-transform duration-200 ${
                     activeMenu === 'more' ? 'rotate-180 text-[#D71920]' : 'text-gray-400 group-hover:text-[#D71920]'
                   }`}
